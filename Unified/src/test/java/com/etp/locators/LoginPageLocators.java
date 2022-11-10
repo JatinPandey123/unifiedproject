@@ -82,17 +82,12 @@ public class LoginPageLocators extends HelperClass{
 	
 	public void userclickgroup() {
 		try {
-			Thread.sleep(2000);
-		
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-	    js.executeScript("window.scrollBy(0,350)", "");
-	    
+			Thread.sleep(5000);
+		WebElement Element=	driver.findElement(By.xpath("//a[contains(text(),'Sylphy Group')]"));
+		Element.click();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-	
-	//WebElement Element=	driver.findElement(By.xpath("//a[contains(text(),'Sylphy Group')]"));
-	
-//	js.executeScript("arguments[0].scrollIntoView();", Element);
+		System.out.println("Selected Group");
 	}
 }
