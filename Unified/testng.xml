@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<test name="Masters">
+   
+   
+     <parameter name="browserName" value="chrome"></parameter> 
+    <parameter name="VendorMaster" value="D:\Unified\CSV\VendorMaster.csv"></parameter>
+  
+    <classes>
+    
+    
+      <class name="com.etp.base.Login">   </class>
+   
+   	<!--  <class name="com.etp.TestClass.TestTagMaster"></class> 	
+	  <class name="com.etp.TestClass.TestPostalCode"></class>  -->
+ 	<!--    <class name="com.etp.TestClass.TestAllModuleOpen"/>  -->
+    
+ 	<!--   <class name="com.etp.TestClass.TestSmartOrderRouting"></class>   
+     
+      <class name="com.etp.TestClass.TestReasonMaster"/>   -->
+    
+  <!--   <class name="com.etp.TestClass.TestLocationMaster"/>  -->
+  <!--    <class name="com.etp.TestClass.TestUserCreation"></class> -->
+  	<!--	<class name="com.etp.TestClass.TestProductCatlog"></class> -->
+  	
+      <class name="com.etp.unified.VendorMaster"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
