@@ -38,6 +38,7 @@ public class LoginPageLocators extends HelperClass{
 	         String strUserName = cell[i]; 
 		
 		driver.findElement(By.name("txtusername")).sendKeys(strUserName);
+		System.out.println("User has entered Username");
 	     }
 	}catch (Exception e) {
 		System.out.println("Exception occured for username");
@@ -56,6 +57,7 @@ public class LoginPageLocators extends HelperClass{
 	         String strUserPassword = cell[i+1]; 
 		
 		driver.findElement(By.id("inputPassword")).sendKeys(strUserPassword);
+		System.out.println("User has entered password");
 	     }
 	}catch (Exception e) {
 		System.out.println("Exception occured for password");
@@ -83,8 +85,18 @@ public class LoginPageLocators extends HelperClass{
 	public void userclickgroup() {
 		try {
 			Thread.sleep(5000);
+			System.out.println("Click on Group");
 		WebElement Element=	driver.findElement(By.xpath("//a[contains(text(),'Sylphy Group')]"));
 		Element.click();
+		Thread.sleep(5000);
+		System.out.println("Click on three lines");
+		driver.findElement(By.xpath("//*[@id='nav-icon1']")).click();
+		Thread.sleep(5000);
+		System.out.println("Click on Product Management");
+		driver.findElement(By.xpath("//span[contains(text(),'PRODUCT MANAGEMENT ')]")).click();
+		Thread.sleep(5000);
+		System.out.println("Click on Product Master");
+		driver.findElement(By.linkText("Product Master")).click();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
