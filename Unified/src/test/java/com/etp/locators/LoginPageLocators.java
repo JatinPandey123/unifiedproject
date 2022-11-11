@@ -1,13 +1,9 @@
 package com.etp.locators;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+
 
 import com.etp.helper.HelperClass;
 import com.opencsv.CSVReader;
@@ -102,4 +98,9 @@ public class LoginPageLocators extends HelperClass{
 		}
 		System.out.println("Selected Group");
 	}
+	
+//	public void userClickThreeLines() {
+//	//System.out.println("Click on three lines");
+//	}
+	
 }

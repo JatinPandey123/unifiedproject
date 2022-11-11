@@ -17,7 +17,7 @@ public class CucumberLogin {
 	
 	
 	@Given("browser is open")
-	public void browser_is_open() {
+	public void browser_is_open() throws Exception {
 		HelperClass.openPage();
 	}
 
