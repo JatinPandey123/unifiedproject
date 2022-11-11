@@ -1,6 +1,8 @@
 package com.etp.locators;
 
 import java.io.FileReader;
+
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -9,6 +11,8 @@ import com.etp.helper.HelperClass;
 import com.opencsv.CSVReader;
 
 public class LoginPageLocators extends HelperClass{
+	
+	Logger log = Logger.getLogger("devpinoyLogger");
 	
 	String CSV_file1 = ".\\CSV\\Login.csv";
 	 CSVReader reader = null;
@@ -34,6 +38,7 @@ public class LoginPageLocators extends HelperClass{
 	         String strUserName = cell[i]; 
 		
 		driver.findElement(By.name("txtusername")).sendKeys(strUserName);
+		log.info("User has entered Username");
 		System.out.println("User has entered Username");
 	     }
 	}catch (Exception e) {
