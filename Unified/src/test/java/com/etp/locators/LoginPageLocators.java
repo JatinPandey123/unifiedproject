@@ -3,30 +3,27 @@ package com.etp.locators;
 import java.io.FileReader;
 
 import org.apache.log4j.Logger;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.etp.helper.HelperClass;
 import com.opencsv.CSVReader;
 
 public class LoginPageLocators extends HelperClass{
 	
+	
 	Logger log = Logger.getLogger("devpinoyLogger");
 	
 	String CSV_file1 = ".\\CSV\\Login.csv";
 	 CSVReader reader = null;
 
-//	@FindBy(name="txtusername")
-//	public WebElement userName;
-//	
-//	@FindBy(id="inputPassword")
-//	public WebElement password;
-//	
-//	@FindBy(id="btnLogin")
-//	public WebElement loginButton;
-	
-
+		
 	public void username()  {
 		try {
 		 reader= new CSVReader(new FileReader(CSV_file1));
@@ -36,8 +33,9 @@ public class LoginPageLocators extends HelperClass{
 	     {  
 	    	 int i=0;
 	         String strUserName = cell[i]; 
-		
+	         Thread.sleep(1000);
 		driver.findElement(By.name("txtusername")).sendKeys(strUserName);
+	   //      userName.sendKeys(strUserName);
 		log.info("User has entered Username");
 		System.out.println("User has entered Username");
 	     }
@@ -56,9 +54,11 @@ public class LoginPageLocators extends HelperClass{
 	     {  
 	    	 int i=0;
 	         String strUserPassword = cell[i+1]; 
+	         Thread.sleep(1000);
+	     	driver.findElement(By.id("inputPassword")).sendKeys(strUserPassword);
+	     	
+	     	log.info("User has entered password");
 		
-		driver.findElement(By.id("inputPassword")).sendKeys(strUserPassword);
-		System.out.println("User has entered password");
 	     }
 	}catch (Exception e) {
 		System.out.println("Exception occured for password");
@@ -67,8 +67,27 @@ public class LoginPageLocators extends HelperClass{
 	}
 	
 	public void userloginbutton() {
+//		try {
+		  try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		driver.findElement(By.id("btnLogin")).click();
 		
+//		Thread.sleep(1000);
+//		String actualResult = driver.findElement(By.xpath("//h4[contains(text(),' Select Group  ')]")).getText();
+//		String expectedResult = " Select Group  ";
+//		if(expectedResult.equalsIgnoreCase(actualResult)) {
+//			test.log(LogStatus.PASS, "Login Sucessful");
+//		}else {
+//			test.log(LogStatus.FAIL, "Login Failed");
+//		}
+//		}catch (Exception e) {
+//			// TODO: handle exception
+//			System.out.println("Exception occured");
+//		}
 	}
 	
 //	public void userinselectgrp() {
@@ -86,26 +105,24 @@ public class LoginPageLocators extends HelperClass{
 	public void userclickgroup() {
 		try {
 			Thread.sleep(5000);
-			System.out.println("Click on Group");
+		log.info("Click on Group");
+			
+			
+	//		WebDriverWait wait = new WebDriverWait(driver, 10);
+	//		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated());
 		WebElement Element=	driver.findElement(By.xpath("//a[contains(text(),'Sylphy Group')]"));
 		Element.click();
-		Thread.sleep(5000);
-		System.out.println("Click on three lines");
-		driver.findElement(By.xpath("//*[@id='nav-icon1']")).click();
-		Thread.sleep(5000);
-		System.out.println("Click on Product Management");
-		driver.findElement(By.xpath("//span[contains(text(),'PRODUCT MANAGEMENT ')]")).click();
-		Thread.sleep(5000);
-		System.out.println("Click on Product Master");
-		driver.findElement(By.linkText("Product Master")).click();
+	//	Thread.sleep(5000);
+	
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		System.out.println("Selected Group");
+		log.info("Selected Group");
 	}
 	
 //	public void userClickThreeLines() {
 //	//System.out.println("Click on three lines");
 //	}
+	
 	
 }

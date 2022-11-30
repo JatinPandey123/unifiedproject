@@ -1,25 +1,31 @@
 package com.etp.actions;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import com.etp.helper.HelperClass;
 import com.etp.locators.LoginPageLocators;
 
+
 public class LoginActions extends HelperClass{
 	
-	LoginPageLocators loginPageLocators; 
+	
+	LoginPageLocators loginPageLocators;
 	
 	
+
 	public LoginActions() {
-		 
+		
         this.loginPageLocators = new LoginPageLocators();
  
         PageFactory.initElements(driver,loginPageLocators);
     }
-  
-
+	
+	
 	 public void setUserName() throws Exception {
+		 
 	    	 Thread.sleep(3000);
 	         loginPageLocators.username();
+	         
 	     }
 	 
 	 public void setPassword() throws Exception {

@@ -11,6 +11,7 @@ public class HelperClass {
      public static WebDriver driver;
 
      public static void openPage() throws Exception {
+    	 
     	 Properties prop=new Properties();	 
     	 FileReader reader = new FileReader(".\\src\\test\\java\\data.properties");
 			 prop.load(reader);
