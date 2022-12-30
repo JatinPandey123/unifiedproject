@@ -49,25 +49,26 @@ public class ProductMasterLocators extends HelperClass{
 		}
 	}
 
-	public void productcreationbutton() {
-		
-	
-			WebDriverWait wait = new WebDriverWait(driver, 20);
-			WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class='hb-add-icon-btn']")));
-			element3.click();
-		//	driver.findElement(By.xpath("//button[@class='hb-add-icon-btn']")).click();
-			
-	}
+//	public void productcreationbutton() {
+//		
+//	
+//			WebDriverWait wait = new WebDriverWait(driver, 40);
+//			WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class='hb-add-icon-btn']")));
+//			element3.click();
+//		//	driver.findElement(By.xpath("//button[@class='hb-add-icon-btn']")).click();
+//			
+//	}
 
-	public void singleproductbutton() {
-		WebDriverWait wait = new WebDriverWait(driver, 20);
-		WebElement element4 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class='add-btn-popup-second-btn']")));
-		element4.click();
-		
-	}
+//	public void singleproductbutton() {
+//		WebDriverWait wait = new WebDriverWait(driver, 20);
+//		WebElement element4 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class='add-btn-popup-second-btn']")));
+//		element4.click();
+//		
+//	}
+//	
+	
 	public void fillproductdetail() throws Exception {
-		
-		
+	
 			 reader= new CSVReader(new FileReader(CSV_file1));
 		     String[] cell=reader.readNext();
 
@@ -99,9 +100,17 @@ public class ProductMasterLocators extends HelperClass{
 		         String imageurl=cell[i+22];
 		         
 		         
+		     	WebDriverWait wait = new WebDriverWait(driver, 40);
+				WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class='hb-add-icon-btn']")));
+				element3.click();
+				
+				WebDriverWait waitss = new WebDriverWait(driver, 40);
+				WebElement element4 = waitss.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class='add-btn-popup-second-btn']")));
+				element4.click();
+		         
 		//Thread.sleep(20000);
-		WebDriverWait wait = new WebDriverWait(driver, 30);
-		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='mat-option-text'][contains(text(),' HelpText123 ')]")));
+		WebDriverWait waitsss = new WebDriverWait(driver, 50);
+		WebElement element = waitsss.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='mat-option-text'][contains(text(),' HelpText123 ')]")));
 		element.click();
 		//String pdtcatlog="Helptext";
 		
@@ -375,7 +384,9 @@ public class ProductMasterLocators extends HelperClass{
 				driver.findElement(By.xpath("//button[@class='hb-white-btn width-35per-imp'][1]")).click();
 			
 		     }
-	}}
+	}
+	
+}
 
 //	public void saveproduct(){
 //		try {

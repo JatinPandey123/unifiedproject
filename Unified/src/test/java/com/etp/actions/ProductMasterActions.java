@@ -22,14 +22,14 @@ public class ProductMasterActions extends HelperClass{
      }
 
 	public void clickaddbutton() {
-	product.productcreationbutton();
+	//product.productcreationbutton();
 		
 	}
 
 	public void clicksingleproduct() {
 		// TODO Auto-generated method stub
 		
-		product.singleproductbutton();
+	//	product.singleproductbutton();
 	}
 
 	public void fillproductdetails() throws Exception {

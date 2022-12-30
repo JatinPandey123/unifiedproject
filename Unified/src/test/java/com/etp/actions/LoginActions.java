@@ -43,7 +43,7 @@ public class LoginActions extends HelperClass{
 //	 }
 //	 
 	 
-	 public void clickGroup()  {
+	 public void clickGroup() throws InterruptedException  {
 		 loginPageLocators.userclickgroup();
 	 }
 	 

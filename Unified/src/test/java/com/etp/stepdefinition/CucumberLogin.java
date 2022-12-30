@@ -63,7 +63,7 @@ public class CucumberLogin extends HelperClass{
 	}
 	
 	@And("user clicks on group")
-	public void user_clicks_on_group() {
+	public void user_clicks_on_group() throws InterruptedException {
 	    
 	   objLogin.clickGroup();
 	}

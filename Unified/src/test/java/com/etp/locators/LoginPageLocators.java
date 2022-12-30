@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.etp.helper.HelperClass;
@@ -102,21 +103,13 @@ public class LoginPageLocators extends HelperClass{
 //		}
 //	}
 	
-	public void userclickgroup() {
-		try {
-			Thread.sleep(5000);
-		log.info("Click on Group");
+	public void userclickgroup() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Sylphy Group")));
+		element3.click();
 			
-			
-	//		WebDriverWait wait = new WebDriverWait(driver, 10);
-	//		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated());
-		WebElement Element=	driver.findElement(By.xpath("//a[contains(text(),'Sylphy Group')]"));
-		Element.click();
-	//	Thread.sleep(5000);
-	
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+	//	WebElement Element=	driver.findElement(By.linkText(""));
+	//	Element.click();
 		log.info("Selected Group");
 	}
 	

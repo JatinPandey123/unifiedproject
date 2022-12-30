@@ -40,8 +40,8 @@ public class ProductEdit extends HelperClass {
 			{
 				int i = 0;
 				String psearch = cell[i + 1];
-				Thread.sleep(5000);
-				driver.findElement(By.xpath("//abbr[@title='refresh button']")).click();
+			//	Thread.sleep(5000);
+			//	driver.findElement(By.xpath("//abbr[@title='refresh button']")).click();
 			//	WebDriverWait wai = new WebDriverWait(driver, 50);
 			//	WebElement ele = wai.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
 				//		"//abbr[@title='refresh button']")));
@@ -97,23 +97,40 @@ public class ProductEdit extends HelperClass {
 				// Thread.sleep(1000);
 //     element4.sendKeys(pedit);
 
-				WebDriverWait waits = new WebDriverWait(driver, 20);
+				System.out.println("Select Costing Allowed");
+				WebDriverWait waits = new WebDriverWait(driver, 40);
 				WebElement element5 = waits.until(ExpectedConditions
 						.visibilityOfElementLocated(By.xpath("//mat-checkbox[@formcontrolname='costingAllowed']")));
 				element5.click();
-
+				
+				Thread.sleep(1000);
+				System.out.println("Selected inactive button");
+				driver.findElement(By.xpath("(//div[@class='mat-radio-outer-circle'])[1]")).click();
+				
 				Thread.sleep(1000);
 				driver.findElement(By.xpath("//span[contains(text(),' SAVE')]")).click();
 
-				WebDriverWait wai = new WebDriverWait(driver, 20);
+				System.out.println("Click on no");
+				WebDriverWait wai = new WebDriverWait(driver, 40);
 				WebElement eleme = wai.until(ExpectedConditions
 						.visibilityOfElementLocated(By.xpath("//button[@class='hb-white-btn width-35per-imp'][1]")));
 				eleme.click();
-
-				// driver.findElement(By.xpath("//button[@class='hb-white-btn
-				// width-35per-imp'][1]")).click();
-
-//	    driver.findElement(By.xpath(" //button[contains(text(),' Ok ')]")).click();
+				
+				
+				WebDriverWait del = new WebDriverWait(driver, 40);
+				WebElement threedot = del.until(ExpectedConditions
+						.visibilityOfElementLocated(By.xpath("(//span[@class='mat-button-wrapper'])[3]/mat-icon")));
+				threedot.click();
+				
+				Thread.sleep(1000);
+				
+				driver.findElement(By.xpath("//button[contains(text(),' Delete ')]")).click();
+				
+				Thread.sleep(1000);
+				driver.findElement(By.xpath(" //button[contains(text(),' Ok ')]")).click();
+	    
+	 // driver.findElement(By.xpath("//button[@class='hb-white-btn
+		// width-35per-imp'][1]")).click();
 				// Thread.sleep(1000);
 //	  driver.findElement(By.xpath("//*[@formcontrolname='productName']")).sendKeys(pedit);
 			}

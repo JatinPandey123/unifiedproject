@@ -1,33 +1,3 @@
-30/11/2022 11:44:36 devpinoyLogger User has entered Username 
-30/11/2022 11:44:40 devpinoyLogger User has entered password 
-30/11/2022 11:44:46 devpinoyLogger Click on Group 
-30/11/2022 11:44:47 devpinoyLogger Selected Group 
-30/11/2022 11:44:55 devpinoyLogger Click on three lines 
-30/11/2022 11:45:00 devpinoyLogger Click on Product Management 
-30/11/2022 11:45:05 devpinoyLogger Click on Product Master 
-30/11/2022 11:45:31 devpinoyLogger Select Product Catalog 
-30/11/2022 11:45:32 devpinoyLogger Product Code 
-30/11/2022 11:45:42 devpinoyLogger Product Name 
-30/11/2022 11:45:47 devpinoyLogger Product Type 
-30/11/2022 11:45:51 devpinoyLogger inventary handling 
-30/11/2022 11:45:53 devpinoyLogger Brand is selected 
-30/11/2022 11:45:57 devpinoyLogger Product Segment is selected 
-30/11/2022 11:45:59 devpinoyLogger Product Category is selected 
-30/11/2022 11:46:02 devpinoyLogger Product Sub Category is selected 
-30/11/2022 11:46:05 devpinoyLogger Product Class is selected 
-30/11/2022 11:46:07 devpinoyLogger Season Id is selected 
-30/11/2022 11:46:10 devpinoyLogger Department Id is selected 
-30/11/2022 11:46:12 devpinoyLogger Procurement Group is selected 
-30/11/2022 11:46:15 devpinoyLogger Pricepoint is selected 
-30/11/2022 11:46:17 devpinoyLogger Product SubClass is selected 
-30/11/2022 11:46:21 devpinoyLogger UAN NUMBER 
-30/11/2022 11:46:22 devpinoyLogger UOM is selected 
-30/11/2022 11:46:25 devpinoyLogger Length 
-30/11/2022 11:46:26 devpinoyLogger Width 
-30/11/2022 11:46:28 devpinoyLogger Height 
-30/11/2022 11:46:30 devpinoyLogger Volume 
-30/11/2022 11:46:32 devpinoyLogger gross weight 
-30/11/2022 11:46:33 devpinoyLogger Net Weight 
-30/11/2022 11:46:36 devpinoyLogger Product Description 
-30/11/2022 11:46:43 devpinoyLogger Image 
-30/11/2022 11:46:47 devpinoyLogger Image url 
+29/12/2022 15:12:20 devpinoyLogger User has entered Username 
+29/12/2022 15:12:24 devpinoyLogger User has entered password 
+29/12/2022 15:12:28 devpinoyLogger Selected Group 
