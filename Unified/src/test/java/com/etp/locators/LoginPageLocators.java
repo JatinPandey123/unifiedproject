@@ -27,6 +27,7 @@ public class LoginPageLocators extends HelperClass{
 		
 	public void username()  {
 		try {
+			Thread.sleep(1000);
 		 reader= new CSVReader(new FileReader(CSV_file1));
 	     String[] cell=reader.readNext();
 

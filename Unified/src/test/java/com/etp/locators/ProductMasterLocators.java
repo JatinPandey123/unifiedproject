@@ -1,10 +1,14 @@
 package com.etp.locators;
 
 import java.io.FileReader;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Random;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
@@ -27,9 +31,11 @@ public class ProductMasterLocators extends HelperClass{
 	
 	Logger log = Logger.getLogger("devpinoyLogger");
 	JavascriptExecutor js = (JavascriptExecutor) driver;
-	String CSV_file1 = ".\\CSV\\ProductMaster.csv";
+	String CSV_file1 = ".\\CSV\\Book33.csv";
 	 CSVReader reader = null;
+	 Random r = new Random();
 	 
+	
 	
 	public void enterproductmaster() {
 		try {
@@ -74,6 +80,10 @@ public class ProductMasterLocators extends HelperClass{
 
 		     while((cell= reader.readNext())!=null)
 		     {  
+		    	 
+		    	
+		    	 
+		    	 
 		    	 int i=0;
 		         String pcode = cell[i]; 
 		         String pname = cell[i+1];
@@ -100,15 +110,48 @@ public class ProductMasterLocators extends HelperClass{
 		         String imageurl=cell[i+22];
 		         
 		         
-		     	WebDriverWait wait = new WebDriverWait(driver, 40);
+		     	// Create object of SimpleDateFormat class and decide the format
+		    	 DateFormat dateFormat = new SimpleDateFormat("dd");
+		    	 DateFormat dateFormat1 = new SimpleDateFormat("dd HH:mm:ss");
+		    	 
+		    	 //System.out.println(dateFormat.format(date));
+		    	 //get current date time with Date()
+		    	 Date date = new Date();
+		    	 
+		    	 // Now format the date
+		    	 String date1= dateFormat.format(date);
+		    	 String date2= dateFormat1.format(date);
+		    	 
+		    	 
+		    	 int dateInt = Integer.parseInt(date1);
+				 System.out.println(dateInt);
+				 System.out.println(date2);
+				 
+				 int FdateInt = dateInt;
+				 String FromDateF =String.valueOf(FdateInt);
+				 
+				 System.out.println(FromDateF);
+				 
+				 
+				 String FromDate = FromDateF;
+				 int ToDateInt = dateInt+10;
+				 String ToDate =String.valueOf(ToDateInt);
+		    	
+		         
+		     	WebDriverWait wait = new WebDriverWait(driver, 50);
 				WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class='hb-add-icon-btn']")));
 				element3.click();
 				
-				WebDriverWait waitss = new WebDriverWait(driver, 40);
+				WebDriverWait waitss = new WebDriverWait(driver, 50);
 				WebElement element4 = waitss.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class='add-btn-popup-second-btn']")));
 				element4.click();
 		         
 		//Thread.sleep(20000);
+				
+				
+				
+	//------------------------------------------Basic Information-----------------------------------------------------------------//
+	
 		WebDriverWait waitsss = new WebDriverWait(driver, 50);
 		WebElement element = waitsss.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='mat-option-text'][contains(text(),' HelpText123 ')]")));
 		element.click();
@@ -122,7 +165,7 @@ public class ProductMasterLocators extends HelperClass{
 		driver.findElement(By.id("productCode")).sendKeys(pcode);
 		Thread.sleep(1000);
 		log.info("Product Name");
-		driver.findElement(By.xpath("//*[@formcontrolname='productName']")).sendKeys(pname);
+		driver.findElement(By.xpath("//*[@formcontrolname='productName']")).sendKeys(pname+date2);
 		
 		Thread.sleep(1000);
 		log.info("Product Type");
@@ -154,6 +197,12 @@ public class ProductMasterLocators extends HelperClass{
 		
 		
 	//	 Thread.sleep(1000);
+		
+		
+		
+		
+	
+//---------------------------------------------------Product Attributes Details-----------------------------------------------------//
 				 
 		log.info("Brand is selected");
 				 WebElement Segmentte= driver.findElement(By.xpath("//*[@ng-reflect-name='brandId']"));
@@ -311,6 +360,9 @@ public class ProductMasterLocators extends HelperClass{
 	driver.findElement(By.xpath("//*[@formcontrolname='aliasNumber']")).sendKeys(uan);	
 	
 	
+	//---------------------------------------Product Dimensions----------------------------------------------------------------------//
+	
+	
 	WebElement lab= driver.findElement(By.xpath("(//p[contains(text(),' Product Dimensions ')])[2]"));
 	
 	js.executeScript("arguments[0].scrollIntoView();", lab);
@@ -356,6 +408,60 @@ public class ProductMasterLocators extends HelperClass{
 	   Thread.sleep(1000);
 	   driver.findElement(By.xpath("//input[@formcontrolname='netWeight']")).sendKeys(netweight);
 	   
+	   
+//--------------------------------------------Product Expiry & Warranty Details------------------------------------------------------//
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   //-------------------------------------------------Prices Details-------------------------------------------------------//
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+//------------------------------------Product Description----------------------------------------------------------------------------//
+	   
+	   
 	   Thread.sleep(1000);
 	   WebElement descrip= driver.findElement(By.xpath("(//p[contains(text(),' Product Description ')])[2]"));
 		
@@ -368,6 +474,19 @@ public class ProductMasterLocators extends HelperClass{
 		des.click();
 		des.sendKeys(description);
 		
+		
+//----------------------------------------Inventory & Replenishment------------------------------------------------------------------//
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+//--------------------------------------------Product Image and Video-----------------------------------------------------------------//
 		log.info("Image");
 		   Thread.sleep(1000);
 		 WebElement image= driver.findElement(By.xpath("(//p[contains(text(),' Product Image and Video ')])[2]"));		
@@ -387,6 +506,16 @@ public class ProductMasterLocators extends HelperClass{
 	}
 	
 }
+
+
+
+
+
+
+
+
+//-----------------------------------------------------Customer Demographics------------------------------------------------------------//
+
 
 //	public void saveproduct(){
 //		try {

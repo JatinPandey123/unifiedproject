@@ -1,5 +1,7 @@
+@productupload
 Feature: Product Upload
 
+#@downloadtemplate
   #Scenario: Check Product Template is downloaded successfully or not
     #Given Product Upload link is available in menu 
     #And user is on Product Upload from menu
@@ -9,9 +11,9 @@ Feature: Product Upload
     #When user fills all the  details 
     #And user clicks on download template
     #Then template will download successfully
-    #
-
     
+
+ @uploadnewproduct  
     Scenario: Check Upload New Product is successful or not
       Given Products Upload link is available
       And user selects Product Upload from menu
