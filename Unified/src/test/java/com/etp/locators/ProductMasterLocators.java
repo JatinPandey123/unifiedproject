@@ -9,7 +9,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Random;
-import java.util.Set;
+
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
@@ -31,12 +31,10 @@ public class ProductMasterLocators extends HelperClass{
 	
 	Logger log = Logger.getLogger("devpinoyLogger");
 	JavascriptExecutor js = (JavascriptExecutor) driver;
-	String CSV_file1 = ".\\CSV\\Book33.csv";
+	String CSV_file1 = ".\\CSV\\basicpromo.csv";
 	 CSVReader reader = null;
 	 Random r = new Random();
 	 
-	
-	
 	public void enterproductmaster() {
 		try {
 			Thread.sleep(5000);
@@ -80,9 +78,7 @@ public class ProductMasterLocators extends HelperClass{
 
 		     while((cell= reader.readNext())!=null)
 		     {  
-		    	 
 		    	
-		    	 
 		    	 
 		    	 int i=0;
 		         String pcode = cell[i]; 

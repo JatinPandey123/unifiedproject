@@ -14,16 +14,16 @@ public class CompanySetupLocators extends HelperClass {
 
 	public void fillcompanydetails() {
 
-		Logger log = Logger.getLogger("devpinoyLogger");
+	//	Logger log = Logger.getLogger("devpinoyLogger");
 
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(8000);
 		
 			driver.findElement(By.xpath("//*[@id='nav-icon1']")).click();
-			Thread.sleep(5000);
+			Thread.sleep(8000);
 			
 			driver.findElement(By.xpath("//span[contains(text(),'ADMINISTRATION ')]")).click();
-			Thread.sleep(5000);
+			Thread.sleep(8000);
 	
 			driver.findElement(By.linkText("Company Setup")).click();
 

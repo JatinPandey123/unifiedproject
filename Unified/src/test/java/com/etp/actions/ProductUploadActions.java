@@ -18,15 +18,15 @@ ProductUploadLocators upload;
     }
 
 	public void selectMenu() {
-		upload.selectMenu();
+	//	upload.selectMenu();
 	}
 
 	public void clickButton() {
-		upload.clickButton();
+	//	upload.clickButton();
 	}
 
 	public void filldetails() {
-		upload.filldetails();
+//		upload.filldetails();
 	}
 	
 	//---------------------------------------------Product new template Upload-------------------------------------------------------//
@@ -37,7 +37,12 @@ ProductUploadLocators upload;
 	}
 
 	public void fillupdloaddetails() {
-		upload.fillupdloaddetails();
+		try {
+			upload.fillupdloaddetails();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 

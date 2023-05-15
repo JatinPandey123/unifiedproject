@@ -1,5 +1,6 @@
 package com.etp.base;
 
+
 import org.junit.runner.RunWith;
 
 
@@ -9,12 +10,13 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(features= 
 {
-"Feature/login.feature" ,
+"Feature/alogin01.feature" ,
+//"Feature/basicpromo.feature"
 "Feature/productupload.feature"
 //"Feature/productcatalog.feature" 
 
 },
-//tags = {"@login", "@uploadnewproduct"},
+//tags ="@loginunify , @basicpromocheck" ,
 glue={"com.etp.stepdefinition"},
 
 plugin= {"pretty",
