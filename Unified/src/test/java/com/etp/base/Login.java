@@ -3,7 +3,6 @@ package com.etp.base;
 
 import org.junit.runner.RunWith;
 
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
@@ -11,12 +10,15 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(features= 
 {
 "Feature/alogin01.feature" ,
-//"Feature/basicpromo.feature"
-"Feature/productupload.feature"
+//"Feature/createcounter.feature"
+//"Feature/productupload.feature"
+ "Feature/includeadvancepromo.feature",
+//"Feature/productmaster.feature"
 //"Feature/productcatalog.feature" 
-
+//"Feature/stockordertype.feature"
+//"Feature/companysetup.feature"
 },
-//tags ="@loginunify , @basicpromocheck" ,
+//tags ="@loginunify , @productcreate" ,
 glue={"com.etp.stepdefinition"},
 
 plugin= {"pretty",

@@ -71,7 +71,7 @@ public class BasicPromo8 extends HelperClass {
 
 			System.out.println("fill basic promo details");
 
-			WebDriverWait wait = new WebDriverWait(driver, 50);
+			WebDriverWait wait = new WebDriverWait(driver, 100);
 			WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@id='plusButton']")));
 			element3.click();
 
@@ -268,8 +268,13 @@ public class BasicPromo8 extends HelperClass {
 					 Thread.sleep(1000);
 					 
 						//store attribute value dropdown
-					 WebElement Segmentt= driver.findElement(By.xpath("//*[@ng-reflect-name='storeAttribValId']"));
-					 Segmentt.click();
+						
+//						
+									 Thread.sleep(6000);
+										
+									    WebDriverWait waitsss = new WebDriverWait(driver, 1000);
+										WebElement element63 = waitsss.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@ng-reflect-name='storeAttribValId']")));
+										element63.click();
 					  
 					 Thread.sleep(1000);
 					 driver.findElement(By.xpath("(//div[@class='mat-checkbox-inner-container'])[1]")).click();

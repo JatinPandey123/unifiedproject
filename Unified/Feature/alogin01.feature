@@ -8,5 +8,5 @@ Feature: Test Login functionality
     When user enter username and password
     And user clicks on login
     Then user is navigated to Select Group
-    #And user clicks on group
+    And user clicks on group
  

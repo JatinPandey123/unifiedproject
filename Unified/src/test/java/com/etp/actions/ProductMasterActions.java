@@ -22,7 +22,7 @@ public class ProductMasterActions extends HelperClass{
      }
 
 	public void clickaddbutton() {
-	//product.productcreationbutton();
+//	product.productcreationbutton();
 		
 	}
 

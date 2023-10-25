@@ -33,15 +33,12 @@ public class CucumberLogin extends HelperClass{
 
 	@And("user is on login page")
 	public void user_is_on_login_page() {
-	   System.out.println("open ho gya");
+	   
 	
 	}
 
 	@When("user enter username and password")
 	public void user_enter_username_and_password() throws Exception  {
-	
-		
-		System.out.println("heelo");
 		
 		objLogin.setUserName();
 		
@@ -59,7 +56,6 @@ public class CucumberLogin extends HelperClass{
 	public void user_is_navigated_to_select_group() {
 	  
 		System.out.println("login Successful");
-		//objLogin.grptextdisplayed();
 	}
 	
 	@And("user clicks on group")

@@ -83,12 +83,12 @@ public class BasicPromo5 extends HelperClass{
 					ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(text(),' APPLY ')]")));
 			element5.click();
 
-			WebDriverWait clickpromo = new WebDriverWait(driver, 70);
+			WebDriverWait clickpromo = new WebDriverWait(driver, 50);
 			WebElement element6 = clickpromo.until(ExpectedConditions.visibilityOfElementLocated(
-					By.xpath("//div[contains(text(),'Common Value Discount on Group of Items')]")));
+					By.xpath("//div[contains(text(),'Common Amount Discount on Group of Products')]")));
 			element6.click();
 
-			WebDriverWait enterpromoname = new WebDriverWait(driver, 70);
+			WebDriverWait enterpromoname = new WebDriverWait(driver, 50);
 			WebElement element7 = enterpromoname.until(
 					ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@formcontrolname='promoName']")));
 			element7.sendKeys(promoname+date2);
@@ -294,10 +294,17 @@ public class BasicPromo5 extends HelperClass{
 					 
 					 //product Attribute need to add
 					 
+					
+					 
+					 
 						//store attribute value dropdown
-					 WebElement Segmentt= driver.findElement(By.xpath("//*[@ng-reflect-name='storeAttribValId']"));
-					 Segmentt.click();
-					  
+					 Thread.sleep(6000);
+						//store attribute value dropdown
+					    WebDriverWait waitsw = new WebDriverWait(driver, 1000);
+						WebElement element62 = waitsw.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@ng-reflect-name='storeAttribValId']")));
+						element62.click();
+						
+						
 					 Thread.sleep(1000);
 					 driver.findElement(By.xpath("(//div[@class='mat-checkbox-inner-container'])[1]")).click();
 						   

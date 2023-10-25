@@ -266,8 +266,12 @@ public class BasicPromo6 extends HelperClass{
 						}
 					 }
 			
-					 WebElement Segmentts= driver.findElement(By.xpath("//*[@ng-reflect-name='productAttributesValue']"));
-					 Segmentts.click();
+					//	Product attribute Value
+					 Thread.sleep(6000);
+						
+					    WebDriverWait waitsw = new WebDriverWait(driver, 1000);
+						WebElement element62 = waitsw.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@ng-reflect-name='productAttributesValue']")));
+						element62.click();
 					  
 					 Thread.sleep(1000);
 					 driver.findElement(By.xpath("(//div[@class='mat-checkbox-inner-container'])[1]")).click();	 
@@ -291,8 +295,12 @@ public class BasicPromo6 extends HelperClass{
 					 
 					 
 						//store attribute value dropdown
-					 WebElement Segmentt= driver.findElement(By.xpath("//*[@ng-reflect-name='storeAttribValId']"));
-					 Segmentt.click();
+//		
+					 Thread.sleep(6000);
+						
+					    WebDriverWait waitsss = new WebDriverWait(driver, 1000);
+						WebElement element63 = waitsss.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@ng-reflect-name='storeAttribValId']")));
+						element63.click();
 					  
 					 Thread.sleep(1000);
 					 driver.findElement(By.xpath("(//div[@class='mat-checkbox-inner-container'])[1]")).click();

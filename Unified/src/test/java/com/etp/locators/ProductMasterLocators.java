@@ -31,7 +31,7 @@ public class ProductMasterLocators extends HelperClass{
 	
 	Logger log = Logger.getLogger("devpinoyLogger");
 	JavascriptExecutor js = (JavascriptExecutor) driver;
-	String CSV_file1 = ".\\CSV\\basicpromo.csv";
+	String CSV_file1 = ".\\CSV\\ProductMaster.csv";
 	 CSVReader reader = null;
 	 Random r = new Random();
 	 
@@ -47,6 +47,15 @@ public class ProductMasterLocators extends HelperClass{
 		log.info("Click on Product Master");
 		driver.findElement(By.linkText("Product Master")).click();
 		
+//		WebDriverWait wait = new WebDriverWait(driver, 50);
+//		WebElement element4 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),' Sylphy Corp')]")));
+//		element4.click();
+
+		
+//		WebDriverWait waitss = new WebDriverWait(driver, 50);
+//		WebElement element5 = waitss.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[contains(text(),' Bata QA ')]")));
+//		element5.click();	
+		
 		}catch (Exception e) {
 			// TODO: handle exception
 			System.out.println("exception occured in enter product master");
@@ -57,9 +66,9 @@ public class ProductMasterLocators extends HelperClass{
 //		
 //	
 //			WebDriverWait wait = new WebDriverWait(driver, 40);
-//			WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class='hb-add-icon-btn']")));
+//			WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@id='plusButton']")));
 //			element3.click();
-//		//	driver.findElement(By.xpath("//button[@class='hb-add-icon-btn']")).click();
+//			driver.findElement(By.xpath("//button[@class='hb-add-icon-btn']")).click();
 //			
 //	}
 
@@ -135,7 +144,7 @@ public class ProductMasterLocators extends HelperClass{
 		    	
 		         
 		     	WebDriverWait wait = new WebDriverWait(driver, 50);
-				WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class='hb-add-icon-btn']")));
+				WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@id='plusButton']")));
 				element3.click();
 				
 				WebDriverWait waitss = new WebDriverWait(driver, 50);
@@ -149,7 +158,7 @@ public class ProductMasterLocators extends HelperClass{
 	//------------------------------------------Basic Information-----------------------------------------------------------------//
 	
 		WebDriverWait waitsss = new WebDriverWait(driver, 50);
-		WebElement element = waitsss.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='mat-option-text'][contains(text(),' HelpText123 ')]")));
+		WebElement element = waitsss.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='mat-option-text'][contains(text(),' Clothes ')]")));
 		element.click();
 		//String pdtcatlog="Helptext";
 		
@@ -157,11 +166,11 @@ public class ProductMasterLocators extends HelperClass{
 		
 
 		Thread.sleep(1000);
-		log.info("Product Code");
+	//	log.info("Product Code");
 		driver.findElement(By.id("productCode")).sendKeys(pcode);
 		Thread.sleep(1000);
 		log.info("Product Name");
-		driver.findElement(By.xpath("//*[@formcontrolname='productName']")).sendKeys(pname+date2);
+		driver.findElement(By.xpath("//*[@formcontrolname='productName']")).sendKeys(pname);
 		
 		Thread.sleep(1000);
 		log.info("Product Type");
@@ -183,11 +192,11 @@ public class ProductMasterLocators extends HelperClass{
 				 
 				 Thread.sleep(1000);
 				 log.info("inventary handling");
-				 driver.findElement(By.xpath("//mat-checkbox[@formcontrolname='invHandling']")).click();
+				 driver.findElement(By.xpath("//mat-checkbox[@name='invHandling']")).click();
 				 
 				
 				 Thread.sleep(1000);
-		WebElement labelbrand= driver.findElement(By.xpath("(//p[contains(text(),' Product Attributes Details ')])[2]"));
+		WebElement labelbrand= driver.findElement(By.xpath("(//p[contains(text(),' Product Attributes Details ')])"));
 		
 		js.executeScript("arguments[0].scrollIntoView();", labelbrand);
 		
@@ -359,7 +368,7 @@ public class ProductMasterLocators extends HelperClass{
 	//---------------------------------------Product Dimensions----------------------------------------------------------------------//
 	
 	
-	WebElement lab= driver.findElement(By.xpath("(//p[contains(text(),' Product Dimensions ')])[2]"));
+	WebElement lab= driver.findElement(By.xpath("(//p[contains(text(),' Product Dimensions ')])[1]"));
 	
 	js.executeScript("arguments[0].scrollIntoView();", lab);
 	
@@ -459,7 +468,7 @@ public class ProductMasterLocators extends HelperClass{
 	   
 	   
 	   Thread.sleep(1000);
-	   WebElement descrip= driver.findElement(By.xpath("(//p[contains(text(),' Product Description ')])[2]"));
+	   WebElement descrip= driver.findElement(By.xpath("//p[contains(text(),' Product Description ')]"));
 		
 		js.executeScript("arguments[0].scrollIntoView();", descrip);
 		
@@ -485,18 +494,21 @@ public class ProductMasterLocators extends HelperClass{
 //--------------------------------------------Product Image and Video-----------------------------------------------------------------//
 		log.info("Image");
 		   Thread.sleep(1000);
-		 WebElement image= driver.findElement(By.xpath("(//p[contains(text(),' Product Image and Video ')])[2]"));		
+		 WebElement image= driver.findElement(By.xpath("(//p[contains(text(),' Product Image and Video ')])[1]"));		
 			js.executeScript("arguments[0].scrollIntoView();", image);
 			
-			log.info("Image url");
-			   Thread.sleep(2000);
-			driver.findElement(By.xpath("//input[@placeholder='Enter URL']")).sendKeys(imageurl);
+		//	log.info("Image url");
+			   Thread.sleep(3000);
+			   
+			WebElement img= driver.findElement(By.xpath("//input[@placeholder='Enter URL']"));
+			img.click();
+			img.sendKeys("https://5.imimg.com/data5/AS/SX/TG/SELLER-473986/liquid-soap-500x500.jpg");
 			
 			 Thread.sleep(3000);
 			driver.findElement(By.xpath("//span[contains(text(),' SAVE')]")).click();
 			
 			 Thread.sleep(3000);
-				driver.findElement(By.xpath("//button[@class='hb-white-btn width-35per-imp'][1]")).click();
+				driver.findElement(By.xpath("//button[@class='hb-default-btn-active ng-star-inserted']")).click();
 			
 		     }
 	}

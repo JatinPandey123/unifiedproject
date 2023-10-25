@@ -264,11 +264,21 @@ public class BasicPromo1 extends HelperClass{
 						}
 					 }
 					 
+					 Thread.sleep(6000);
 						//store attribute value dropdown
-					 WebElement Segmentt= driver.findElement(By.xpath("//*[@ng-reflect-name='storeAttribValId']"));
-					 Segmentt.click();
+					    WebDriverWait waitsw = new WebDriverWait(driver, 1000);
+						WebElement element62 = waitsw.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@ng-reflect-name='storeAttribValId']")));
+						element62.click();
+					 
+					 
+					 
+					 
+					 
+//					 Thread.sleep(3000);
+//					 WebElement Segmentt= driver.findElement(By.xpath(""));
+//					 Segmentt.click();
 					  
-					 Thread.sleep(1000);
+					 Thread.sleep(3000);
 					 driver.findElement(By.xpath("(//div[@class='mat-checkbox-inner-container'])[1]")).click();
 						   
 					

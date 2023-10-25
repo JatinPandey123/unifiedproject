@@ -2,6 +2,9 @@ package com.etp.locators;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.etp.helper.HelperClass;
 
@@ -30,9 +33,11 @@ public class ProductCatalogLocators extends HelperClass{
 
 	public void clickaddbutton() {
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(8000);
 			
-			driver.findElement(By.xpath("//button[@class='hb-add-icon-btn']")).click();
+			WebDriverWait wait = new WebDriverWait(driver, 100);
+			WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class='hb-add-icon-btn']")));
+			element3.click();
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -43,6 +48,15 @@ public class ProductCatalogLocators extends HelperClass{
 	public void fillmandatorydetails() {
 		
 		try {
+			
+			
+		//	Thread.sleep(10000);
+			
+			WebDriverWait wait = new WebDriverWait(driver, 8000);
+			WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='new-wrapper-id']/div/app-catalog-list/div/div[4]/button")));
+			element3.click();
+			
+			
 			Thread.sleep(4000);
 			String code="BAT";
 			driver.findElement(By.xpath("//input[@id='catalogCode']")).sendKeys(code);

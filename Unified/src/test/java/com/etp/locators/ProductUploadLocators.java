@@ -109,14 +109,14 @@ public class ProductUploadLocators extends HelperClass{
 	//	log.info("Click on Product Master");
 		driver.findElement(By.linkText("Product Master")).click();
 		
-		WebDriverWait wait = new WebDriverWait(driver, 50);
-		WebElement element4 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),' Sylphy Corp')]")));
-		element4.click();
-
-		
-		WebDriverWait waitss = new WebDriverWait(driver, 50);
-		WebElement element5 = waitss.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[contains(text(),' Bata QA ')]")));
-		element5.click();	
+//		WebDriverWait wait = new WebDriverWait(driver, 50);
+//		WebElement element4 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),' Sylphy Corp')]")));
+//		element4.click();
+//
+//		
+//		WebDriverWait waitss = new WebDriverWait(driver, 50);
+//		WebElement element5 = waitss.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[contains(text(),' Bata QA ')]")));
+//		element5.click();	
 		
 		WebDriverWait waitx = new WebDriverWait(driver, 50);
 		WebElement element3 = waitx.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class='btn-round']")));

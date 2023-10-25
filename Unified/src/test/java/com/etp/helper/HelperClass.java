@@ -17,7 +17,6 @@ public class HelperClass {
 			 prop.load(reader);
 		
     	 System.setProperty(prop.getProperty("chromedriver"),prop.getProperty("driverpath"));
-		//	 System.setProperty("webdriver.chrome.driver","D:\\seleniumJars\\chromedriver.exe");
     	 driver=new ChromeDriver();
     	 driver.manage().window().maximize();
          driver.get(prop.getProperty("url"));

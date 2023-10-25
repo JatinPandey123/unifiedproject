@@ -86,7 +86,7 @@ public class BasicPromo7 extends HelperClass{
 
 			WebDriverWait clickpromo = new WebDriverWait(driver, 70);
 			WebElement element6 = clickpromo.until(ExpectedConditions.visibilityOfElementLocated(
-					By.xpath("//div[contains(text(),'Display Message on Item Scan')]")));
+					By.xpath("//div[contains(text(),'Display Message on Product Scan')]")));
 			element6.click();
 
 			WebDriverWait enterpromoname = new WebDriverWait(driver, 70);
@@ -297,8 +297,13 @@ public class BasicPromo7 extends HelperClass{
 					 
 					 
 						//store attribute value dropdown
-					 WebElement Segmentt= driver.findElement(By.xpath("//*[@ng-reflect-name='storeAttribValId']"));
-					 Segmentt.click();
+						
+//						
+									 Thread.sleep(6000);
+										
+									    WebDriverWait waitsss = new WebDriverWait(driver, 1000);
+										WebElement element63 = waitsss.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@ng-reflect-name='storeAttribValId']")));
+										element63.click();
 					  
 					 Thread.sleep(1000);
 					 driver.findElement(By.xpath("(//div[@class='mat-checkbox-inner-container'])[1]")).click();

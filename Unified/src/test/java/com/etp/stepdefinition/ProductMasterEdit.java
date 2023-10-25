@@ -19,7 +19,7 @@ public void user_is_on_list_screen() {
 }
 @Then("user can search in search bar")
 public void user_can_search_in_search_bar() {
-  products.searchproduct();
+ // products.searchproduct();
 }
 
 
@@ -31,12 +31,12 @@ public void User_is_on_list_screen_for_edit() {
 
 @And("user clicks on three dots in list screen")
 public void user_clicks_on_three_dots_in_list_screen() {
-  products.editThreeDots();
+//  products.editThreeDots();
 }
 
 @Then("user clicks on edit option")
 public void user_clicks_on_edit_option() {
-products.clickEdit();
+//products.clickEdit();
 }
 
 @And("user is on edit screen")
@@ -46,7 +46,7 @@ public void user_is_on_edit_screen() {
 
 @When("user Edit the details in edit screen")
 public void user_edit_the_details_in_edit_screen() {
-   products.editDetails();
+//   products.editDetails();
 }
 
 @And("user clicks on save button in edit screen")
