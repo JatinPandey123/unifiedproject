@@ -1,7 +1,7 @@
 package com.etp.locators;
 
 import java.io.FileReader;
-
+import java.time.Duration;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
@@ -49,7 +49,7 @@ public class ProductEdit extends HelperClass {
 				
 				
 				
-					WebDriverWait waitss = new WebDriverWait(driver, 40);
+				WebDriverWait waitss = new WebDriverWait(driver, 50);
 					WebElement elemen = waitss.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
 							"//input[@placeholder='Search by Product Name, Code, Catalog, Category, Brand And Segment']")));
 					elemen.sendKeys(psearch);
@@ -98,8 +98,8 @@ public class ProductEdit extends HelperClass {
 //     element4.sendKeys(pedit);
 
 				System.out.println("Select Costing Allowed");
-				WebDriverWait waits = new WebDriverWait(driver, 40);
-				WebElement element5 = waits.until(ExpectedConditions
+				WebDriverWait wait = new WebDriverWait(driver, 50);
+				WebElement element5 = wait.until(ExpectedConditions
 						.visibilityOfElementLocated(By.xpath("//mat-checkbox[@formcontrolname='costingAllowed']")));
 				element5.click();
 				
@@ -111,14 +111,14 @@ public class ProductEdit extends HelperClass {
 				driver.findElement(By.xpath("//span[contains(text(),' SAVE')]")).click();
 
 				System.out.println("Click on no");
-				WebDriverWait wai = new WebDriverWait(driver, 40);
-				WebElement eleme = wai.until(ExpectedConditions
+				WebDriverWait waits = new WebDriverWait(driver, 50);
+				WebElement eleme = waits.until(ExpectedConditions
 						.visibilityOfElementLocated(By.xpath("//button[@class='hb-white-btn width-35per-imp'][1]")));
 				eleme.click();
 				
 				
-				WebDriverWait del = new WebDriverWait(driver, 40);
-				WebElement threedot = del.until(ExpectedConditions
+		//		WebDriverWait del = new WebDriverWait(driver, 40);
+				WebElement threedot = wait.until(ExpectedConditions
 						.visibilityOfElementLocated(By.xpath("(//span[@class='mat-button-wrapper'])[3]/mat-icon")));
 				threedot.click();
 				

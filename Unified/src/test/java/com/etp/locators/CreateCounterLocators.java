@@ -1,6 +1,7 @@
 package com.etp.locators;
 
 import java.io.FileReader;
+import java.time.Duration;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -44,8 +45,8 @@ public class CreateCounterLocators extends HelperClass{
 	//	Thread.sleep(4000);
 	//	driver.findElement(By.xpath("//li[contains(text(),' Bata QA ')]")).click();
 		
-		WebDriverWait waitss = new WebDriverWait(driver, 50);
-		WebElement element6 = waitss.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//mat-select[@id='storeatttype']")));
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+		WebElement element6 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//mat-select[@id='storeatttype']")));
 		element6.click();
 		
 		
@@ -116,9 +117,9 @@ public class CreateCounterLocators extends HelperClass{
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("(//button[contains(text(),' SAVE ')])[1]")).click();
 		
-		
-		WebDriverWait waitsss = new WebDriverWait(driver, 50);
-		WebElement element6 = waitsss.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(text(),' No ')]")));
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+	//	WebDriverWait waitsss = new WebDriverWait(driver, 50);
+		WebElement element6 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(text(),' No ')]")));
 		element6.click();
 		
 		

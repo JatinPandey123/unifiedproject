@@ -1,19 +1,32 @@
 package com.etp.locators;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
 import org.apache.http.message.BasicListHeaderIterator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.etp.helper.HelperClass;
 import com.opencsv.CSVReader;
 
-public class AdvancePromoLocators extends HelperClass{
-	
+import junit.framework.Assert;
+
+public class AdvancePromoLocators extends HelperClass {
 
 	public void enterpromotion() throws Exception{
 	
@@ -31,29 +44,29 @@ public class AdvancePromoLocators extends HelperClass{
 //			WebDriverWait wait = new WebDriverWait(driver, 500);
 //			WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@id='plusButton']")));
 //			element3.click();
-
-			WebDriverWait waitss = new WebDriverWait(driver, 500);
-			WebElement element4 = waitss.until(
+			
+			WebDriverWait wait = new WebDriverWait(driver, 50);
+			WebElement element4 = wait.until(
 					ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Search By Promo Code or Promo Name']")));
 			Thread.sleep(2000);
 			element4.sendKeys("Voucher");
 			
 		
-			WebElement element7 = waitss.until(
+			WebElement element7 = wait.until(
 					ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Search By Promo Code or Promo Name']")));
 			element7.sendKeys("Promotion1987");
 		
 		
-			WebElement element9 = waitss.until(
+			WebElement element9 = wait.until(
 					ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Search By Promo Code or Promo Name']")));
 			Thread.sleep(1000);
-			element9.sendKeys("8");
+			element9.sendKeys("9");
 			
-			WebElement element10 = waitss.until(
+			WebElement element10 = wait.until(
 					ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@id='hb-mat-btn-css-override']")));
 			element10.click();
 			
-			WebElement element11 = waitss.until(
+			WebElement element11 = wait.until(
 					ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[@class='mat-menu-item'])[1]")));
 			element11.click();
 			
@@ -62,42 +75,108 @@ public class AdvancePromoLocators extends HelperClass{
 			Thread.sleep(1000);
 			js1.executeScript("arguments[0].scrollIntoView();", Elee1);
 			
-			WebElement element12 = waitss.until(
+			WebElement element12 = wait.until(
 			ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class='btn activeBtn new_Btn addHeaderBtn']")));		
 			element12.click();
 			
 			
-			WebElement element13 = waitss.until(
+			WebElement element13 = wait.until(
 			ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[name()='text' and @id='v-300']//*[name()='tspan' and contains(@class,'v-line')]")));		
 			element13.click();
 			
-			WebElement element14 = waitss.until(
+			WebElement element14 = wait.until(
 			ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),' ADD PRODUCT ')]")));
 			element14.click();
 			
-//			WebDriverWait waitsse = new WebDriverWait(driver, 1000);
-//			WebElement element15 = waitsse.until(
-//			ExpectedConditions.visibilityOfElementLocated(By.xpath("(//span[contains(text(),' FILTER ')])[1]")));
-//			//element15.click();
-//			element15.sendKeys(Keys.TAB);
+		//	Thread.sleep(10000);
 			
-		//	Thread.sleep(1000);
-		//	driver.switchTo().activeElement();
-			driver.findElement(By.xpath("(//div[@class='modal-content popuopModalContentSize top-80'])[1]/div/div[4]/div/ul/li/div[2]/input")).click();
+			//(//input[@id="file-input"])[1]
+			//div[@id='addProductInclude']//input[@id='file-input']
 			
-		//	System.out.println(element15);
-//			
-//			WebElement element18 = waitss.until(
-//			ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[1]/app-root/div/div[3]/div/app-advance-promotion/div/div[5]/div[5]/div[1]/app-product-attributes/div[3]/div/div/div/div[4]/div[1]/ul/li/div[2]/input")));
-//			element18.click();
-//			Thread.sleep(1000);
-//			driver.findElement(By.xpath("(//input[@type='file'])[3]")).click();
-		
+			WebElement a=driver.findElement(By.xpath("//div[@id='addProductInclude']//input[@id='file-input']"));
+			System.out.println(a.getText()+"    "+a.getTagName());
+					
+			Actions actions = new Actions(driver); 
+			actions.moveToElement(a).click().build().perform();
 			
+			  StringSelection ss = new StringSelection("C:\\Users\\Lenovo\\Desktop\\Product Include\\promoInclude.xls");
+			    Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
 
+			    //imitate mouse events like ENTER, CTRL+C, CTRL+V
+			    Robot robot;
+				try {
+					robot = new Robot();
+				
+			    robot.delay(500);
+			    robot.keyPress(KeyEvent.VK_ENTER);
+			    robot.keyRelease(KeyEvent.VK_ENTER);
+			    Thread.sleep(1000);	
+			    robot.keyPress(KeyEvent.VK_CONTROL);
+			    Thread.sleep(1000);
+			    robot.keyPress(KeyEvent.VK_V);
+			    Thread.sleep(1000);
+			    robot.keyRelease(KeyEvent.VK_V);
+			    robot.keyRelease(KeyEvent.VK_CONTROL);
+			    Thread.sleep(1000);
+			    robot.keyPress(KeyEvent.VK_ENTER);
+			    Thread.sleep(1000);
+			    robot.keyRelease(KeyEvent.VK_ENTER);
+			    robot.delay(100);
+			    robot.keyRelease(KeyEvent.VK_ENTER);
 			
-	
-		
-	}
-	
-	}
+				} catch (AWTException e) {
+					e.printStackTrace();
+				}
+				
+				WebElement element15 = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='j_155']")));		
+				element15.click();
+				
+				//driver.findElement(By.id("")).click();		
+				
+				Thread.sleep(1000);
+				
+				driver.findElement(By.xpath("(//span[@class='mainMenuTree ng-star-inserted'])[3]")).click();
+				
+				Thread.sleep(1000);
+				
+				driver.findElement(By.xpath("(//span[@class='menu-bg-color'])[3]")).click();
+				
+				Thread.sleep(1000);
+				
+				driver.findElement(By.xpath("//button[@class='addCatalog']")).click();
+				
+				Thread.sleep(1000);
+				
+				driver.findElement(By.xpath("(//label[@class='mat-checkbox-layout'])[15]")).click();
+				
+				Thread.sleep(1000);
+				
+				driver.findElement(By.xpath("(//button[contains(text(),' ADD ')])[2]")).click();
+				
+				Thread.sleep(1000);
+				
+				driver.findElement(By.xpath("//p[contains(text(),'Actions')]")).click();
+				
+				Thread.sleep(1000);
+				
+				driver.findElement(By.xpath("(//span[@class='innerTree menu-bg-color HeaderDiscountLi'])[1]")).click();
+				
+				Thread.sleep(1000);
+				
+				driver.findElement(By.xpath("//input[@id='searchCatalog']")).sendKeys("5");
+				
+				Thread.sleep(1000);
+				
+				driver.findElement(By.xpath("//button[contains(text(),' APPLY ')]")).click();
+				
+				Thread.sleep(1000);
+				
+				driver.findElement(By.xpath("(//button[contains(text(),' UPDATE ')])[1]")).click();
+				
+				Thread.sleep(1000);
+				
+				driver.findElement(By.xpath("//button[contains(text(),' No ')]")).click();
+				
+}
+}

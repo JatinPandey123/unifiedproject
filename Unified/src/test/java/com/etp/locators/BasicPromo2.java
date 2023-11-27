@@ -3,6 +3,7 @@ package com.etp.locators;
 import java.io.FileReader;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.Date;
 import java.util.List;
 
@@ -75,23 +76,23 @@ public class BasicPromo2 extends HelperClass{
 		WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@id='plusButton']")));
 		element3.click();
 
-		WebDriverWait waitss = new WebDriverWait(driver, 50);
-		WebElement element4 = waitss.until(
+		//WebDriverWait waitss = new WebDriverWait(driver, 50);
+		WebElement element4 = wait.until(
 				ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(text(),' BASIC ')]")));
 		element4.click();
 
-		WebDriverWait apply = new WebDriverWait(driver, 50);
-		WebElement element5 = apply.until(
+	//	WebDriverWait apply = new WebDriverWait(driver, 50);
+		WebElement element5 = wait.until(
 				ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(text(),' APPLY ')]")));
 		element5.click();
 
-		WebDriverWait clickpromo = new WebDriverWait(driver, 70);
-		WebElement element6 = clickpromo.until(ExpectedConditions.visibilityOfElementLocated(
+	//	WebDriverWait clickpromo = new WebDriverWait(driver, 70);
+		WebElement element6 = wait.until(ExpectedConditions.visibilityOfElementLocated(
 				By.xpath("//div[contains(text(),'Percentage Discount on Bill Amount')]")));
 		element6.click();
 
-		WebDriverWait enterpromoname = new WebDriverWait(driver, 70);
-		WebElement element7 = enterpromoname.until(
+	//	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		WebElement element7 = wait.until(
 				ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@formcontrolname='promoName']")));
 		element7.sendKeys(promoname+date2);
 
@@ -269,8 +270,8 @@ public class BasicPromo2 extends HelperClass{
 					//store attribute value dropdown
 				 Thread.sleep(6000);
 					//store attribute value dropdown
-				    WebDriverWait waitsw = new WebDriverWait(driver, 1000);
-					WebElement element62 = waitsw.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@ng-reflect-name='storeAttribValId']")));
+				   
+					WebElement element62 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@ng-reflect-name='storeAttribValId']")));
 					element62.click();
 				  
 				 Thread.sleep(1000);
@@ -301,8 +302,8 @@ public class BasicPromo2 extends HelperClass{
 				driver.findElement(By.xpath("//button[contains(text(),' Yes ')]")).click();
 				
 				
-				WebDriverWait waits = new WebDriverWait(driver, 50);
-				WebElement element61 = waits.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(text(),' Ok ')]")));
+				
+				WebElement element61 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(text(),' Ok ')]")));
 				element61.click();
 				
 				//Thread.sleep(3000);

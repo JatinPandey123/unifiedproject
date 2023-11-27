@@ -30,7 +30,7 @@ public class ProductCatalog {
 
 	@When("user clicks on plus button")
 	public void user_clicks_on_plus_button() {
-	//  productcatlog.clickaddbutton();
+	  productcatlog.clickaddbutton();
 	}
 
 	@Then("user is navigated to product catalog creation page")

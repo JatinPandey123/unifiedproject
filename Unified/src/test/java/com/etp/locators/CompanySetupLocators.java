@@ -1,5 +1,6 @@
 package com.etp.locators;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.apache.log4j.Logger;

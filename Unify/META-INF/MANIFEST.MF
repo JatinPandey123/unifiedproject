@@ -1,0 +1,44 @@
+Ant-Version: Apache Ant 1.6.5
+Archiver-Version: Plexus Archiver
+Automatic-Module-Name: org.yaml.snakeyaml
+Bnd-LastModified: 1528215473612
+Build-Date: 2017-05-15
+Build-Jdk: 1.8.0_141
+Built-By: maintain
+Bundle-Description: Pure Java implementation of libzmq
+Bundle-DocURL: https://glassfish.dev.java.net
+Bundle-License: https://www.mozilla.org/en-US/MPL/2.0
+Bundle-ManifestVersion: 2
+Bundle-Name: eu.neilalexander:jnacl
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-SymbolicName: eu.neilalexander.jnacl
+Bundle-Vendor: SLF4J.ORG
+Bundle-Version: 1.0.0
+Created-By: 1.8.0_141 (Oracle Corporation)
+Export-Package: com.neilalexander.jnacl.crypto;version="1.0.0",com.nei
+ lalexander.jnacl;version="1.0.0"
+Extension-Name: javax.servlet
+Implementation-Build: trunk@r1636211; 2014-11-02 23:51:55+0000
+Implementation-Title: slf4j-api
+Implementation-Vendor: GlassFish Community
+Implementation-Vendor-Id: org.glassfish
+Implementation-Version: 1.7.25
+Import-Package: com.neilalexander.jnacl.crypto;version="[1.0,2)"
+Include-Resource: META-INF/LICENSE.txt=LICENSE.txt,META-INF/NOTICE.txt
+ =NOTICE.txt
+Main-Class: org.openqa.grid.selenium.GridLauncherV3
+Manifest-Version: 1.0
+Multi-Release: True
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Specification-Title: Apache Commons Exec
+Specification-Vendor: Oracle Corporation
+Specification-Version: 3.1
+Tool: Bnd-3.5.0.201709291849
+X-Compile-Source-JDK: 1.5
+X-Compile-Target-JDK: 1.5
+
+Name: Build-Info
+Build-Revision: f148142cf8
+Build-Time: 2019-07-01T21:30:10
+Selenium-Version: 4.0.0-alpha-2
+

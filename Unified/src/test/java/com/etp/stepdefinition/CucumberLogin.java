@@ -1,19 +1,7 @@
 package com.etp.stepdefinition;
 
-
-import java.io.File;
-
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-
 import com.etp.actions.LoginActions;
 import com.etp.helper.HelperClass;
-import com.gargoylesoftware.htmlunit.javascript.host.file.FileSystemDirectoryReader;
-
-import io.cucumber.java.After;
-import io.cucumber.java.Scenario;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -64,13 +52,6 @@ public class CucumberLogin extends HelperClass{
 	   objLogin.clickGroup();
 	}
 	
-	@After
-	public static void tearDown(Scenario scenario) {
-	 
-	        //validate if scenario has failed
-	        if(scenario.isFailed()) {
-	            final byte[] screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-	            scenario.attach(screenshot, "image/png", scenario.getName()); 
-	        }   
+  
 	}
-}
+

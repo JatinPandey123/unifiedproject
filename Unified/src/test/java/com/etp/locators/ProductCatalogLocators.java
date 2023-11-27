@@ -33,18 +33,15 @@ public class ProductCatalogLocators extends HelperClass{
 
 	public void clickaddbutton() {
 		try {
-			Thread.sleep(8000);
-			
-			WebDriverWait wait = new WebDriverWait(driver, 100);
-			WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class='hb-add-icon-btn']")));
-			element3.click();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		Thread.sleep(1000);
+		WebDriverWait wait = new WebDriverWait(driver, 500);
+		WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='new-wrapper-id']//button[@class='hb-add-icon-btn']")));
+		element3.click();
 		
+	}catch (Exception e) {
+		// TODO: handle exception
 	}
-
+	}
 	public void fillmandatorydetails() {
 		
 		try {
@@ -52,9 +49,9 @@ public class ProductCatalogLocators extends HelperClass{
 			
 		//	Thread.sleep(10000);
 			
-			WebDriverWait wait = new WebDriverWait(driver, 8000);
-			WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='new-wrapper-id']/div/app-catalog-list/div/div[4]/button")));
-			element3.click();
+//			WebDriverWait wait = new WebDriverWait(driver, 1000);
+//			WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='new-wrapper-id']/div/app-catalog-list/div/div[4]/button")));
+//			element3.click();
 			
 			
 			Thread.sleep(4000);

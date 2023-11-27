@@ -1,6 +1,7 @@
 package com.etp.locators;
 
 import java.io.FileReader;
+import java.time.Duration;
 
 import org.apache.log4j.Logger;
 
@@ -87,10 +88,11 @@ public class LoginPageLocators extends HelperClass {
 				String loc_selectGroup = cell[i + 5];
 				WebDriverWait wait = new WebDriverWait(driver, 50);
 				WebElement element3 = wait
-						.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='user-list-card-list-tab'])[5]")));
+						.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='user-list-card-list-tab'])[6]")));
 				element3.click();
 
 				log.info("Selected Group");
+				
 			}
 		} catch (Exception e) {
 			System.out.println("Exception Occured while selecting the group");

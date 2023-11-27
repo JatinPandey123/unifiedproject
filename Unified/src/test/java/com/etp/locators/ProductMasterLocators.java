@@ -19,6 +19,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
@@ -37,13 +38,14 @@ public class ProductMasterLocators extends HelperClass{
 	 
 	public void enterproductmaster() {
 		try {
-			Thread.sleep(5000);
-		log.info("Click on three lines");
-		driver.findElement(By.xpath("//*[@id='nav-icon1']")).click();
-		Thread.sleep(5000);
+		log.info("Click on three dots ");
+		WebDriverWait waitss = new WebDriverWait(driver, 1000);
+		WebElement element4 = waitss.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='nav-icon1']")));
+		element4.click();
+		Thread.sleep(1000);
 		log.info("Click on Product Management");
 		driver.findElement(By.xpath("//span[contains(text(),'PRODUCT MANAGEMENT ')]")).click();
-		Thread.sleep(5000);
+		Thread.sleep(1000);
 		log.info("Click on Product Master");
 		driver.findElement(By.linkText("Product Master")).click();
 		
@@ -141,13 +143,21 @@ public class ProductMasterLocators extends HelperClass{
 				 String FromDate = FromDateF;
 				 int ToDateInt = dateInt+10;
 				 String ToDate =String.valueOf(ToDateInt);
+				 
+				 Thread.sleep(1000);
+				 
+				WebElement a=driver.findElement(By.xpath("//div[@id='new-wrapper-id']//button[@id='plusButton']//span[@class='close']"));
+					//System.out.println(a.getText()+"    "+a.getTagName());
+							
+				Actions actions = new Actions(driver); 
+				actions.moveToElement(a).click().build().perform();
 		    	
-		         
-		     	WebDriverWait wait = new WebDriverWait(driver, 50);
-				WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@id='plusButton']")));
-				element3.click();
+//		        Thread.sleep(5000);
+//		     	WebDriverWait wait = new WebDriverWait(driver, 3000);
+//				WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='new-wrapper-id']//button[@id='plusButton']//span[@class='close']")));
+//				element3.click();
 				
-				WebDriverWait waitss = new WebDriverWait(driver, 50);
+				WebDriverWait waitss = new WebDriverWait(driver, 300);
 				WebElement element4 = waitss.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class='add-btn-popup-second-btn']")));
 				element4.click();
 		         

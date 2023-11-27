@@ -12,11 +12,12 @@ import io.cucumber.junit.CucumberOptions;
 "Feature/alogin01.feature" ,
 //"Feature/createcounter.feature"
 //"Feature/productupload.feature"
- "Feature/includeadvancepromo.feature",
+//"Feature/includeadvancepromo.feature",
 //"Feature/productmaster.feature"
 //"Feature/productcatalog.feature" 
 //"Feature/stockordertype.feature"
 //"Feature/companysetup.feature"
+"Feature/basicpromo.feature"
 },
 //tags ="@loginunify , @productcreate" ,
 glue={"com.etp.stepdefinition"},
