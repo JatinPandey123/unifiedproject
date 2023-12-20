@@ -71,7 +71,7 @@ public class BasicPromo1 extends HelperClass{
 
 			System.out.println("fill basic promo details");
 
-			WebDriverWait waitx = new WebDriverWait(driver, 500);
+			WebDriverWait waitx = new WebDriverWait(driver, 6000);
     		WebElement element3 = waitx.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='new-wrapper-id']//button[@class='btn-round']")));
     		element3.click();
 
@@ -146,6 +146,7 @@ public class BasicPromo1 extends HelperClass{
 				}
 				for (WebElement c : year) {
 					if (dates[2].equalsIgnoreCase(c.getText())) {
+						System.out.println(c.getText());
 						c.click();
 						k = 1;
 						break;
@@ -166,6 +167,7 @@ public class BasicPromo1 extends HelperClass{
 			List<WebElement> caldate = driver.findElements(By.xpath("//td"));
 			Thread.sleep(1000);
 			for (WebElement c : caldate) {
+				System.out.println(c.getText());
 				if (dates[0].equalsIgnoreCase(c.getText())) {
 					c.click();
 					break;
@@ -173,7 +175,7 @@ public class BasicPromo1 extends HelperClass{
 			}
 
 			// from time
-			Thread.sleep(2000);
+			Thread.sleep(5000);
 			// db.sysloginfo(log,"Click on From Time");
 			driver.findElement(By.xpath("(//*[@class='ngx-material-timepicker-toggle'])[1]")).click();
 			// Thread.sleep(3000);
@@ -257,7 +259,7 @@ public class BasicPromo1 extends HelperClass{
 				    List<WebElement> segmentDr = driver.findElements(By.tagName("mat-option"));
 					 for(WebElement values:segmentDr)
 					 {
-						 String requiredvalue="Store"; 
+						 String requiredvalue="Store Brand"; 
 						if(requiredvalue.equalsIgnoreCase(values.getText())) {
 							System.out.println(values.getText());
 							values.click();
@@ -265,33 +267,31 @@ public class BasicPromo1 extends HelperClass{
 						}
 					 }
 					 
-					 Thread.sleep(6000);
+					// Thread.sleep(000);
 						//store attribute value dropdown
 					  //  WebDriverWait waitsw = new WebDriverWait(driver, 1000);
-						WebElement element62 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@ng-reflect-name='storeAttribValId']")));
+						WebDriverWait waits = new WebDriverWait(driver, 1000);
+						WebElement element62 = waits.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@ng-reflect-name='storeAttribValId']")));
 						element62.click();
-					 
-					 
-					 
-					 
-					 
-//					 Thread.sleep(3000);
-//					 WebElement Segmentt= driver.findElement(By.xpath(""));
-//					 Segmentt.click();
+						Thread.sleep(1000);
+						driver.findElement(By.xpath("//input[@placeholder='Search Store Attribute Value']")).sendKeys("22321");
 					  
-					 Thread.sleep(3000);
-					 driver.findElement(By.xpath("(//div[@class='mat-checkbox-inner-container'])[1]")).click();
-						   
+						Thread.sleep(1000);
+						driver.findElement(By.xpath("//a[contains(text(),' Select All')]")).click();
+					// Thread.sleep(1000);
+					// driver.findElement(By.xpath("")).click();
+				//	WebElement element64 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='mat-checkbox-inner-container'])[1]")));
+				//	element64.click();  
 					
 					
 					Thread.sleep(1000);
-					driver.findElement(By.xpath("//input[@id='searchItem']")).sendKeys("Product200");
+					driver.findElement(By.xpath("//input[@id='searchItem']")).sendKeys("Product02");
 					
 					Thread.sleep(1000);
-					driver.findElement(By.xpath("(//mat-option[@class='promo_items-searchBOx mat-option ng-star-inserted'])[2]")).click();
+					driver.findElement(By.xpath("(//mat-option[@class='promo_items-searchBOx mat-option ng-star-inserted'])[1]")).click();
 					
-					Thread.sleep(1000);
-					driver.findElement(By.xpath("//input[@id='offerprice0']")).sendKeys("5");
+					Thread.sleep(5000);
+					driver.findElement(By.xpath("//input[@id='offerprice0']")).sendKeys("0");
 					
 					Thread.sleep(1000);				
 					JavascriptExecutor js12 = (JavascriptExecutor) driver;

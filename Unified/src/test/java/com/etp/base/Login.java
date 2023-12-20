@@ -10,14 +10,16 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(features= 
 {
 "Feature/alogin01.feature" ,
+//"Feature/copypromotion.feature"
 //"Feature/createcounter.feature"
 //"Feature/productupload.feature"
-//"Feature/includeadvancepromo.feature",
+//"Feature/basicadvanceperdisc.feature",
 //"Feature/productmaster.feature"
 //"Feature/productcatalog.feature" 
 //"Feature/stockordertype.feature"
 //"Feature/companysetup.feature"
-"Feature/basicpromo.feature"
+ "Feature/copypromotion.feature"
+//"Feature/basicpromo.feature"
 },
 //tags ="@loginunify , @productcreate" ,
 glue={"com.etp.stepdefinition"},

@@ -29,15 +29,15 @@ public class ProductCatalogLocators extends HelperClass{
 		}
 	}
 		
-	
-
 	public void clickaddbutton() {
 		try {
-		Thread.sleep(1000);
-		WebDriverWait wait = new WebDriverWait(driver, 500);
+		Thread.sleep(5000);
+		WebDriverWait wait = new WebDriverWait(driver, 6000);
 		WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='new-wrapper-id']//button[@class='hb-add-icon-btn']")));
 		element3.click();
 		
+	//	driver.findElement(By.xpath("//button[@class='hb-add-icon-btn']")).click();
+			
 	}catch (Exception e) {
 		// TODO: handle exception
 	}

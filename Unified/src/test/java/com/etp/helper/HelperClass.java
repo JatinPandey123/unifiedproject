@@ -26,6 +26,7 @@ public class HelperClass {
 			 
     	 System.setProperty(prop.getProperty("chromedriver"),prop.getProperty("driverpath"));
     	 driver=new ChromeDriver();
+  
     	 driver.manage().window().maximize();
          driver.get(prop.getProperty("url"));
      }

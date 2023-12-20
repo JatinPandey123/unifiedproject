@@ -43,10 +43,10 @@ Logger log = Logger.getLogger("devpinoyLogger");
 		
 		//for node to node transfer
 			Thread.sleep(1000);
-			driver.findElement(By.id("stockOrdTypeCode")).sendKeys("StockOrderType1");
+			driver.findElement(By.id("stockOrdTypeCode")).sendKeys("StockOrderType19");
 			
 			Thread.sleep(1000);
-			driver.findElement(By.id("stockOrdTypeName")).sendKeys("StockOrderType1");
+			driver.findElement(By.id("stockOrdTypeName")).sendKeys("StockOrderType19");
 			
 			Thread.sleep(1000);
 			driver.findElement(By.xpath("//div[@class='mat-checkbox-inner-container']")).click();

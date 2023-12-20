@@ -36,12 +36,12 @@ public class CompanySetupLocators extends HelperClass {
 
 			WebElement companycode = wait
 					.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='companyCode']")));
-			companycode.sendKeys("76576");
+			companycode.sendKeys("FC526");
 			
 			
 			WebElement companyname = wait
 					.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@formcontrolname='companyName']")));
-			companyname.sendKeys("Addidas1");
+			companyname.sendKeys("Addidas9");
 
 		//	Thread.sleep(2000);
 			// company name

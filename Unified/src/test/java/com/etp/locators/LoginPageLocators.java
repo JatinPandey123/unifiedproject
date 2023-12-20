@@ -88,7 +88,7 @@ public class LoginPageLocators extends HelperClass {
 				String loc_selectGroup = cell[i + 5];
 				WebDriverWait wait = new WebDriverWait(driver, 50);
 				WebElement element3 = wait
-						.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='user-list-card-list-tab'])[6]")));
+						.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='user-list-card-list-tab'])[5]")));
 				element3.click();
 
 				log.info("Selected Group");

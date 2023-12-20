@@ -20,9 +20,7 @@ public class BasicPromoLocators extends HelperClass{
 		//	log.info("Click on  Store Administration");
 			driver.findElement(By.xpath("//span[contains(text(),'PRICING & PROMOTIONS ')]")).click();
 			Thread.sleep(2000);
-
-			driver.findElement(By.linkText("Promotions")).click();
-//			
+			driver.findElement(By.linkText("Promotions")).click();			
 //			WebDriverWait wait = new WebDriverWait(driver, 50);
 //			WebElement element4 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),' Sylphy Corp')]")));
 //			element4.click();
@@ -39,8 +37,8 @@ public class BasicPromoLocators extends HelperClass{
 	}
 	public void filldetails() throws Exception {
 	
-//	BasicPromo1 promo1=new BasicPromo1();
-//	promo1.basicpromo1();
+	BasicPromo1 promo1=new BasicPromo1();
+	promo1.basicpromo1();
 //	
 //	BasicPromo2 promo2=new BasicPromo2();
 //	promo2.basicpromo2();
@@ -66,8 +64,8 @@ public class BasicPromoLocators extends HelperClass{
 //	
 //	
 //	
-	BasicPromo8 promo8=new BasicPromo8();
-	promo8.basicpromo8();
+//	BasicPromo8 promo8=new BasicPromo8();
+//	promo8.basicpromo8();
 	
 		
 	}
