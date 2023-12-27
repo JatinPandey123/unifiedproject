@@ -12,9 +12,7 @@ public class BasicPromoActions extends HelperClass{
 	BasicPromoLocators promos;
 	
 	 public BasicPromoActions() {
-		// TODO Auto-generated constructor stub
 		
-		 
        this.promos = new BasicPromoLocators();
 
        PageFactory.initElements(driver,promos);

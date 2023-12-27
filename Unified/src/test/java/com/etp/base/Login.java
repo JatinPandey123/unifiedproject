@@ -16,10 +16,12 @@ import io.cucumber.junit.CucumberOptions;
 //"Feature/basicadvanceperdisc.feature",
 //"Feature/productmaster.feature"
 //"Feature/productcatalog.feature" 
-//"Feature/stockordertype.feature"
+"Feature/stockordertype.feature"
 //"Feature/companysetup.feature"
- "Feature/copypromotion.feature"
+ //"Feature/copypromotion.feature"
 //"Feature/basicpromo.feature"
+//"Feature/billsave.feature"
+
 },
 //tags ="@loginunify , @productcreate" ,
 glue={"com.etp.stepdefinition"},

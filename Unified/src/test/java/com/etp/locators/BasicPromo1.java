@@ -80,12 +80,14 @@ public class BasicPromo1 extends HelperClass{
 					ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(text(),' BASIC ')]")));
 			element4.click();
 
+			
 		//	WebDriverWait apply = new WebDriverWait(driver, 50);
 			WebElement element5 = wait.until(
 					ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(text(),' APPLY ')]")));
 			element5.click();
 
 		//	WebDriverWait clickpromo = new WebDriverWait(driver, 70);
+			//Thread.sleep(1000);
 			WebElement element6 = wait.until(ExpectedConditions.visibilityOfElementLocated(
 					By.xpath("//div[contains(text(),'Offer Price Promotions(%,Amount,Offer Price)')]")));
 			element6.click();
