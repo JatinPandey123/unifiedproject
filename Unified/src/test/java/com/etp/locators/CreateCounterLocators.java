@@ -18,17 +18,29 @@ public class CreateCounterLocators extends HelperClass{
 	
 	String CSV_file1 = ".\\CSV\\createcounter.csv";
 	CSVReader reader = null;
+	
+	
+	public void clickplusbuttoncounter() {
+		try {
+			
+			System.out.println("click plus button counter");
+			
+		}catch (Exception e) {
+			System.out.println("Exception occured in clicking plus button in counter list screen"+" "+e);
+		}
+		
+	}
 
 	public void createcounter() {
 		try {
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		log.info("Click on three lines");
 		driver.findElement(By.xpath("//*[@id='nav-icon1']")).click();
 		Thread.sleep(1000);
 		log.info("Click on  Store Administration");
 		driver.findElement(By.xpath("//span[contains(text(),'STORE ADMINISTRATION ')]")).click();
 		Thread.sleep(1000);
-		log.info("Click on Product Master");
+		log.info("Click on Counter Registration");
 		driver.findElement(By.linkText("Counter Registration")).click();
 	
 	//	Thread.sleep(4000);
@@ -55,12 +67,12 @@ public class CreateCounterLocators extends HelperClass{
 		driver.findElement(By.xpath("//mat-select[@id='storeatttype']")).click();
 		
 		Thread.sleep(4000);
-		driver.findElement(By.xpath("//input[@placeholder='Select Store']")).sendKeys("mum231");
+		driver.findElement(By.xpath("//input[@placeholder='Select Store']")).sendKeys("mum232");
 		
 		
 		
 		Thread.sleep(1000);
-		driver.findElement(By.xpath("//span[contains(text(),' MUM231 - Mumbai Store 231 ')]")).click();
+		driver.findElement(By.xpath("//span[contains(text(),' MUM232 - Mumbai Store 232 ')]")).click();
 		
 //		 WebElement Segmenttt= driver.findElement(By.xpath("//*[@ng-reflect-name='productType']"));
 //		 Segmenttt.click();
@@ -129,6 +141,9 @@ public class CreateCounterLocators extends HelperClass{
 		}
 		
 	}
+
+	
+
 
 	
 	

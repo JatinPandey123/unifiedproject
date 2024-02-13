@@ -36,7 +36,7 @@ public class CompanySetupLocators extends HelperClass {
 
 			WebElement companycode = wait
 					.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='companyCode']")));
-			companycode.sendKeys("FD322");
+			companycode.sendKeys("25762");
 			
 			
 			WebElement companyname = wait
@@ -98,11 +98,11 @@ public class CompanySetupLocators extends HelperClass {
 
 			//
 			Thread.sleep(1000);
-			driver.findElement(By.xpath("//input[@formcontrolname='taxDecNo']")).sendKeys("324323");
+			driver.findElement(By.xpath("//input[@formcontrolname='taxDecNo']")).sendKeys("3242323");
 
 			//Tax Declaration No.
 			Thread.sleep(1000);
-			driver.findElement(By.xpath("//input[@formcontrolname='regNo']")).sendKeys("4354543");
+			driver.findElement(By.xpath("//input[@formcontrolname='regNo']")).sendKeys("4154343");
 
 			
 			//scroll

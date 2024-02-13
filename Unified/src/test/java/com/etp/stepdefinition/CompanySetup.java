@@ -13,7 +13,7 @@ public class CompanySetup {
 	
 	@Given("Company Setup link is available in menu")
 	public void company_setup_link_is_available_in_menu() {
-	   
+	//   company.companylink();
 	}
 	@Given("user is on Company Setup from menu")
 	public void user_is_on_company_setup_from_menu() {

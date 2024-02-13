@@ -34,6 +34,15 @@ CreateCounterLocators counters;
 		counters.fillcounterdetails();
 	}
 
+
+
+
+
+	public void clickplusbuttoncounter() {
+		counters.clickplusbuttoncounter();
+		
+	}
+
 	
 	
 	

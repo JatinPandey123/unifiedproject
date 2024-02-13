@@ -186,11 +186,5 @@
     <version>1.18.24</version>
     <scope>provided</scope>
 </dependency>
-
-  	<dependency>
-  		<groupId>com.unify</groupId>
-  		<artifactId>UnifyProject</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
-  	</dependency>
   </dependencies>
 </project>

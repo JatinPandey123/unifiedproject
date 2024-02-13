@@ -25,6 +25,9 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.etp.commonlinks.Modulemenu;
+import com.etp.commonlinks.Modulesubmenu;
+import com.etp.commonlinks.ThreeDotsCommon;
 import com.etp.helper.HelperClass;
 import com.opencsv.CSVReader;
 
@@ -38,16 +41,30 @@ public class ProductMasterLocators extends HelperClass{
 	 
 	public void enterproductmaster() {
 		try {
-		log.info("Click on three dots ");
-		WebDriverWait waitss = new WebDriverWait(driver, 1000);
-		WebElement element4 = waitss.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='nav-icon1']")));
-		element4.click();
-		Thread.sleep(1000);
-		log.info("Click on Product Management");
-		driver.findElement(By.xpath("//span[contains(text(),'PRODUCT MANAGEMENT ')]")).click();
-		Thread.sleep(1000);
-		log.info("Click on Product Master");
-		driver.findElement(By.linkText("Product Master")).click();
+		
+		ThreeDotsCommon threelines= new ThreeDotsCommon();
+		threelines.threedots();
+		
+		
+		Modulemenu menu=new Modulemenu();
+		menu.ProductManagement();
+		
+		
+		Modulesubmenu submenu=new Modulesubmenu();
+		submenu.ProductMaster();
+			
+//		log.info("Click on three dots ");
+//		WebDriverWait waitss = new WebDriverWait(driver, 1000);
+//		WebElement element4 = waitss.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='nav-icon1']")));
+//		element4.click();
+			
+			
+//		Thread.sleep(1000);
+//		log.info("Click on Product Management");
+//		driver.findElement(By.xpath("//span[contains(text(),'PRODUCT MANAGEMENT ')]")).click();
+//		Thread.sleep(1000);
+//		log.info("Click on Product Master");
+//		driver.findElement(By.linkText("Product Master")).click();
 		
 //		WebDriverWait wait = new WebDriverWait(driver, 50);
 //		WebElement element4 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),' Sylphy Corp')]")));

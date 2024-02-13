@@ -38,10 +38,12 @@ public class CopyPromotionLocators extends HelperClass{
 		         String promoname = cell[i]; 
 		         String promodesc = cell[i+1];
 		
-		Thread.sleep(1000);
-		driver.findElement(By.xpath("//input[@placeholder='Search By Promo Code or Promo Name']")).sendKeys("checkoutCopy1");
-		Thread.sleep(1000);
-		driver.findElement(By.xpath("//button[@id='hb-mat-btn-css-override']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//input[@placeholder='Search By Promo Code or Promo Name']")).sendKeys("checkout");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//input[@placeholder='Search By Promo Code or Promo Name']")).sendKeys("Copy1");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("(//button[@id='hb-mat-btn-css-override'])[1]")).click();
     //	Thread.sleep(1000);
 	//	driver.findElement(By.xpath("(//button[@class='mat-menu-item'])[4]")).click();
 	//	Thread.sleep(1000);

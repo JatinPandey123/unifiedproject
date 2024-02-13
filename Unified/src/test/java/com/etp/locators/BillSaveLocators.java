@@ -8,7 +8,7 @@ public class BillSaveLocators extends HelperClass{
 
 	public void openpos() {
 		try {
-		Thread.sleep(1000);
+		Thread.sleep(6000);
 		driver.findElement(By.xpath("//*[@id='nav-icon1']")).click();
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//span[contains(text(),'POS ')]")).click();

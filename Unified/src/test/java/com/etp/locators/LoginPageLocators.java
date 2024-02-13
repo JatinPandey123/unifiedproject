@@ -36,7 +36,7 @@ public class LoginPageLocators extends HelperClass {
 				log.info("User has entered Username");
 			}
 		} catch (Exception e) {
-			System.out.println("Exception occured for username");
+			System.out.println("Exception occured for username"+" "+e);
 		}
 
 	}
@@ -57,7 +57,7 @@ public class LoginPageLocators extends HelperClass {
 
 			}
 		} catch (Exception e) {
-			System.out.println("Exception occured for password");
+			System.out.println("Exception occured for password"+" "+e);
 		}
 
 	}
@@ -74,7 +74,7 @@ public class LoginPageLocators extends HelperClass {
 				log.info("click on login button");
 			}
 		} catch (Exception e) {
-			System.out.println("Exception occured for clicking LoginButton");
+			System.out.println("Exception occured for clicking LoginButton"+" "+e);
 		}
 
 	}
@@ -86,16 +86,16 @@ public class LoginPageLocators extends HelperClass {
 			while ((cell = reader.readNext()) != null) {
 				int i = 0;
 				String loc_selectGroup = cell[i + 5];
+				Thread.sleep(6000);
 				WebDriverWait wait = new WebDriverWait(driver, 50);
-				WebElement element3 = wait
-						.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='user-list-card-list-tab'])[6]")));
+				WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='user-list-card-list-tab'])[3]")));
 				element3.click();
 
 				log.info("Selected Group");
 				
 			}
 		} catch (Exception e) {
-			System.out.println("Exception Occured while selecting the group");
+			System.out.println("Exception Occured while selecting the group"+" "+e);
 		}
 	}
 }

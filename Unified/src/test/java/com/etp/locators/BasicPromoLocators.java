@@ -13,7 +13,7 @@ public class BasicPromoLocators extends HelperClass{
 
 	public void enterpromotion() {
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 		//	log.info("Click on three lines");
 			driver.findElement(By.xpath("//*[@id='nav-icon1']")).click();
 			Thread.sleep(2000);

@@ -10,16 +10,18 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(features= 
 {
 "Feature/alogin01.feature" ,
-//"Feature/copypromotion.feature"
-//"Feature/createcounter.feature"
-//"Feature/productupload.feature"
-//"Feature/basicadvanceperdisc.feature",
-//"Feature/productmaster.feature"
-//"Feature/productcatalog.feature" 
-"Feature/stockordertype.feature"
-//"Feature/companysetup.feature"
- //"Feature/copypromotion.feature"
-//"Feature/basicpromo.feature"
+"Feature/companyedit.feature",
+"Feature/groupedit.feature",
+"Feature/copypromotion.feature",
+"Feature/createcounter.feature",
+"Feature/productupload.feature",
+"Feature/basicadvanceperdisc.feature",
+"Feature/productmaster.feature",
+"Feature/productcatalog.feature" ,
+"Feature/stockordertype.feature",
+"Feature/companysetup.feature",
+"Feature/copypromotion.feature",
+"Feature/basicpromo.feature"
 //"Feature/billsave.feature"
 
 },

@@ -72,7 +72,7 @@ public class BasicPromo1 extends HelperClass{
 			System.out.println("fill basic promo details");
 
 			WebDriverWait waitx = new WebDriverWait(driver, 6000);
-    		WebElement element3 = waitx.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='new-wrapper-id']//button[@class='btn-round']")));
+    		WebElement element3 = waitx.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='new-wrapper-id']//button[@id='plusButton']")));
     		element3.click();
 
 			WebDriverWait wait = new WebDriverWait(driver, 50);

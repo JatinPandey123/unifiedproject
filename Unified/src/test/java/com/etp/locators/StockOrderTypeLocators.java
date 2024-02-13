@@ -3,7 +3,6 @@ package com.etp.locators;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -14,9 +13,9 @@ Logger log = Logger.getLogger("devpinoyLogger");
 	
 	public void enterstockordertype() {
 		try {
-			log.info("Click on three dots ");
+		//	log.info("Click on three dots ");
 			Thread.sleep(1000);
-			WebDriverWait waitss = new WebDriverWait(driver, 1000);
+			WebDriverWait waitss = new WebDriverWait(driver, 2000);
 			WebElement element4 = waitss.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='nav-icon1']")));
 			element4.click();
 			
@@ -44,10 +43,10 @@ Logger log = Logger.getLogger("devpinoyLogger");
 		
 		//for node to node transfer
 			Thread.sleep(1000);
-			driver.findElement(By.id("stockOrdTypeCode")).sendKeys("StockOrderType23");
+			driver.findElement(By.id("stockOrdTypeCode")).sendKeys("StockOrderType29");
 			
 			Thread.sleep(1000);
-			driver.findElement(By.id("stockOrdTypeName")).sendKeys("StockOrderType23");
+			driver.findElement(By.id("stockOrdTypeName")).sendKeys("StockOrderType29");
 			
 			Thread.sleep(1000);
 			driver.findElement(By.xpath("//div[@class='mat-checkbox-inner-container']")).click();

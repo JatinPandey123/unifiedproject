@@ -1,7 +1,6 @@
-27/12/2023 10:09:05 devpinoyLogger User has entered Username 
-27/12/2023 10:09:10 devpinoyLogger User has entered password 
-27/12/2023 10:09:10 devpinoyLogger click on login button 
-27/12/2023 10:09:10 devpinoyLogger Selected Group 
-27/12/2023 10:09:10 devpinoyLogger Click on three dots  
-27/12/2023 10:09:13 devpinoyLogger Click on INVENTORY MANAGEMENT  
-27/12/2023 10:09:14 devpinoyLogger Click on Stock Order Type 
+13/02/2024 15:14:12 devpinoyLogger User has entered Username 
+13/02/2024 15:14:16 devpinoyLogger User has entered password 
+13/02/2024 15:14:17 devpinoyLogger click on login button 
+13/02/2024 15:14:23 devpinoyLogger Selected Group 
+13/02/2024 15:16:41 devpinoyLogger Click on three lines 
+13/02/2024 15:17:05 devpinoyLogger Click on three lines 

@@ -28,7 +28,7 @@ public class CreateCounter {
 	}
 	@When("user clicks on plus button for counter")
 	public void user_clicks_on_plus_button_for_counter() {
-	  
+	  counter.clickplusbuttoncounter();
 	}
 	@Then("user is navigated to create counter creation page")
 	public void user_is_navigated_to_create_counter_creation_page() {
