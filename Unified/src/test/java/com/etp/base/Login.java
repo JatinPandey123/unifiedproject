@@ -1,8 +1,6 @@
 package com.etp.base;
 
-
 import org.junit.runner.RunWith;
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
@@ -10,17 +8,19 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(features= 
 {
 "Feature/alogin01.feature" ,
-"Feature/companyedit.feature",
-"Feature/groupedit.feature",
-"Feature/copypromotion.feature",
-"Feature/createcounter.feature",
-"Feature/productupload.feature",
-"Feature/basicadvanceperdisc.feature",
-"Feature/productmaster.feature",
-"Feature/productcatalog.feature" ,
-"Feature/stockordertype.feature",
-"Feature/companysetup.feature",
-"Feature/copypromotion.feature",
+//"Feature/stockordertype.feature",
+//"Feature/companyedit.feature",
+//"Feature/createcounter.feature",
+//"Feature/groupedit.feature",
+//"Feature/copypromotion.feature",
+//
+//"Feature/productupload.feature",
+//"Feature/basicadvanceperdisc.feature",
+//"Feature/productmaster.feature",
+//"Feature/productcatalog.feature" ,
+
+//"Feature/companysetup.feature",
+//"Feature/copypromotion.feature",
 "Feature/basicpromo.feature"
 //"Feature/billsave.feature"
 

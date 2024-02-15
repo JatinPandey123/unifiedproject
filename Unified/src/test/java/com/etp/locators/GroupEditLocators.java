@@ -1,10 +1,7 @@
 package com.etp.locators;
-
 import org.openqa.selenium.By;
-
 import com.etp.helper.HelperClass;
 
-import test.thread.Helper;
 
 public class GroupEditLocators extends HelperClass{
 
