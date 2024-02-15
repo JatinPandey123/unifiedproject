@@ -13,15 +13,14 @@ import io.cucumber.junit.CucumberOptions;
 //"Feature/createcounter.feature",
 //"Feature/groupedit.feature",
 //"Feature/copypromotion.feature",
-//
+////
 //"Feature/productupload.feature",
 //"Feature/basicadvanceperdisc.feature",
 //"Feature/productmaster.feature",
 //"Feature/productcatalog.feature" ,
-
 //"Feature/companysetup.feature",
 //"Feature/copypromotion.feature",
-"Feature/basicpromo.feature"
+//"Feature/basicpromo.feature"
 //"Feature/billsave.feature"
 
 },

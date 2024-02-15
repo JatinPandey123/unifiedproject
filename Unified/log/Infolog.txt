@@ -1,4 +1,0 @@
-14/02/2024 01:57:41 devpinoyLogger User has entered Username 
-14/02/2024 01:57:45 devpinoyLogger User has entered password 
-14/02/2024 01:57:45 devpinoyLogger click on login button 
-14/02/2024 01:57:51 devpinoyLogger Selected Group 
