@@ -15,7 +15,7 @@ import com.opencsv.CSVReader;
 
 public class LoginPageLocators extends HelperClass {
 
-	Logger log = Logger.getLogger("devpinoyLogger");
+//	Logger log = Logger.getLogger("devpinoyLogger");
 
 	String CSV_Login = ".\\CSV\\Login.csv";
 	CSVReader reader = null;
@@ -33,7 +33,7 @@ public class LoginPageLocators extends HelperClass {
 
 				Thread.sleep(1000);
 				driver.findElement(By.name(loc_userName)).sendKeys(txt_userName);
-				log.info("User has entered Username");
+			//	log.info("User has entered Username");
 			}
 		} catch (Exception e) {
 			System.out.println("Exception occured for username"+" "+e);
@@ -53,7 +53,7 @@ public class LoginPageLocators extends HelperClass {
 				Thread.sleep(1000);
 				driver.findElement(By.id(loc_userPassword)).sendKeys(txt_userPassword);
 
-				log.info("User has entered password");
+		//		log.info("User has entered password");
 
 			}
 		} catch (Exception e) {
@@ -71,7 +71,7 @@ public class LoginPageLocators extends HelperClass {
 				int i = 0;
 				String loc_loginButton = cell[i + 4];
 				driver.findElement(By.id(loc_loginButton)).click();
-				log.info("click on login button");
+			//	log.info("click on login button");
 			}
 		} catch (Exception e) {
 			System.out.println("Exception occured for clicking LoginButton"+" "+e);
@@ -88,10 +88,18 @@ public class LoginPageLocators extends HelperClass {
 				String loc_selectGroup = cell[i + 5];
 				Thread.sleep(6000);
 				WebDriverWait wait = new WebDriverWait(driver, 50);
-				WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='user-list-card-list-tab'])[3]")));
+				
+				//impl
+			//	WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='user-list-card-list-tab'])[5]")));
+				WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),' Sylphy Test')]")));
 				element3.click();
+				
+				
+				//dev
+			//	WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),' Sylphy Group')]")));
+			//	element3.click();
 
-				log.info("Selected Group");
+		//		log.info("Selected Group");
 				
 			}
 		} catch (Exception e) {

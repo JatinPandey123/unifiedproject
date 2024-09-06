@@ -1,12 +1,13 @@
 package com.etp.stepdefinition;
 
+
+
 import com.etp.actions.CreateCounterActions;
-import com.etp.actions.ProductMasterActions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.masterthought.cucumber.util.Counter;
+
 
 public class CreateCounter {
 	

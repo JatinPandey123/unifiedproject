@@ -14,6 +14,136 @@
  <maven.compiler.source>1.8</maven.compiler.source>
  <maven.compiler.target>1.8</maven.compiler.target>
 </properties>
+
+ <build>
+
+     <plugins>
+
+           <plugin>
+
+			    <groupId>org.apache.maven.plugins</groupId>
+
+			    <artifactId>maven-compiler-plugin</artifactId>
+
+			    <version>3.8.1</version>
+
+			     <configuration>
+
+                   <source>1.8</source>
+
+                   <target>1.8</target>
+
+                </configuration>
+
+	      </plugin>
+
+			
+
+		  <plugin>
+
+			    <groupId>org.apache.maven.plugins</groupId>
+
+                <artifactId>maven-surefire-plugin</artifactId>
+
+                <version>2.19.1</version>
+
+                 <configuration>
+
+			   <suiteXmlFiles>
+
+                <suiteXmlFile>testng.xml</suiteXmlFile>
+
+                  </suiteXmlFiles>
+
+               </configuration>
+
+         </plugin>
+
+           <plugin>
+
+                <groupId>net.masterthought</groupId>
+
+                <artifactId>maven-cucumber-reporting</artifactId>
+
+                <version>5.7.4</version>
+
+                <executions>
+
+                    <execution>
+
+                        <id>execution</id>
+
+                        <phase>verify</phase>
+
+                        <goals>
+
+                            <goal>generate</goal>
+
+                        </goals>
+
+                        <configuration>
+
+                            <projectName>Unified</projectName>
+
+                            <!-- optional, per documentation set this to "true" to bypass generation of Cucumber Reports entirely, defaults to false if not specified -->
+
+                       
+
+                            <!-- output directory for the generated report -->
+
+                            <outputDirectory>target/cucumber-reports/advance-reports</outputDirectory>
+
+                            <!-- optional, defaults to outputDirectory if not specified -->
+
+                            <inputDirectory>${project.build.directory}/jsonReports</inputDirectory>
+
+                            <jsonFiles>
+
+                                <!-- supports wildcard or name pattern -->
+
+                                <param>**/*.json</param>
+
+                            </jsonFiles>
+
+                            <!-- optional, defaults to outputDirectory if not specified -->
+
+                            <classificationDirectory>${project.build.directory}/classifications</classificationDirectory>
+
+                            <classificationFiles>
+
+                                    <!-- supports wildcard or name pattern -->
+
+                                    <param>sample.properties</param>
+
+                                    <param>other.properties</param>
+
+                            </classificationFiles>
+
+                            <parallelTesting>false</parallelTesting>
+
+                            <!-- optional, set true to group features by its Ids -->
+
+                            <mergeFeaturesById>false</mergeFeaturesById>
+
+                            <!-- optional, set true to get a final report with latest results of the same test from different test runs -->
+
+                            <mergeFeaturesWithRetest>false</mergeFeaturesWithRetest>
+
+                            <!-- optional, set true to fail build on test failures -->
+
+                            <checkBuildResult>false</checkBuildResult>
+
+                        </configuration>
+
+                    </execution>
+
+                </executions>
+
+            </plugin>
+
+     </plugins>
+
+</build>
  
   <dependencies>
   
@@ -89,5 +219,26 @@
     <artifactId>log4j-core</artifactId>
     <version>2.19.0</version>
 </dependency>
-  </dependencies>
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>4.1.7</version>
+</dependency>
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>4.1.0</version>
+    </dependency>
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>8.0.25</version>
+    </dependency>
+    <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>7.4.0</version>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
 </project>

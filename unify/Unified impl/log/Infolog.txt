@@ -1,0 +1,7 @@
+05/03/2024 11:47:08 devpinoyLogger User has entered Username 
+05/03/2024 11:47:12 devpinoyLogger User has entered password 
+05/03/2024 11:47:12 devpinoyLogger click on login button 
+05/03/2024 11:47:18 devpinoyLogger Selected Group 
+05/03/2024 11:47:21 devpinoyLogger Click on three lines 
+05/03/2024 11:47:23 devpinoyLogger Click on  Store Administration 
+05/03/2024 11:47:24 devpinoyLogger Click on Counter Registration 

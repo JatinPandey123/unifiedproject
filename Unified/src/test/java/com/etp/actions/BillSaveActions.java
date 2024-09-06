@@ -3,7 +3,6 @@ package com.etp.actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.etp.helper.HelperClass;
-import com.etp.locators.BasicPromoLocators;
 import com.etp.locators.BillSaveLocators;
 
 public class BillSaveActions extends HelperClass{
@@ -26,11 +25,10 @@ public class BillSaveActions extends HelperClass{
 	billsave.selectcompany();
 		
 	}
-
-	public void selectcounter() {
-		billsave.selectcounter();
-		
+	public void selectstore() {
+		billsave.selectstore();
 	}
+
 
 	public void selectshift() {
 		billsave.selectshift();
@@ -61,5 +59,14 @@ public class BillSaveActions extends HelperClass{
 		billsave.clicksavebill();
 		
 	}
+
+	public void selectcounter() {
+		billsave.selectcounter();
+		
+	}
+
+
+
+
 
 }

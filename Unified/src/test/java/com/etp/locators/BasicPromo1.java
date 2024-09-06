@@ -287,7 +287,7 @@ public class BasicPromo1 extends HelperClass{
 					
 					
 					Thread.sleep(1000);
-					driver.findElement(By.xpath("//input[@id='searchItem']")).sendKeys("Product02");
+					driver.findElement(By.xpath("//input[@id='searchItem']")).sendKeys("IGST07");
 					
 					Thread.sleep(1000);
 					driver.findElement(By.xpath("(//mat-option[@class='promo_items-searchBOx mat-option ng-star-inserted'])[1]")).click();
@@ -309,7 +309,7 @@ public class BasicPromo1 extends HelperClass{
 					
 					
 					Thread.sleep(1000);
-					driver.findElement(By.xpath("//span[contains(text(),'SAVE')]")).click();
+					driver.findElement(By.xpath("(//button[contains(text(),' SAVE ')])[1]")).click();
 					
 					
 					Thread.sleep(1000);

@@ -20,26 +20,40 @@ public class ProductCatalog {
 
 	@And("user is on Product Catalog from menu")
 	public void user_is_on_product_catalog_from_menu() {
-	    
+	    System.out.println("enter product catalog menu");
 	}
 
 	@Then("Product Catalog list screen is displayed")
 	public void product_catalog_list_screen_is_displayed() {
-	    
+	    System.out.println("enter product catalog screen");
 	}
 
 	@When("user clicks on plus button")
-	public void user_clicks_on_plus_button() {
+	public void user_clicks_on_plus_button() throws InterruptedException {
+		Thread.sleep(3000);
 	  productcatlog.clickaddbutton();
 	}
 
 	@Then("user is navigated to product catalog creation page")
 	public void user_is_navigated_to_product_catalog_creation_page() {
-	   
+	   System.out.println("user is on product catalog creation page");
 	}
 
 	@When("user fills all mandatory details")
 	public void user_fills_all_mandatory_details() {
 	   productcatlog.fillmandatorydetails();
 	}
+	
+	@And("user clicks on save button for catalog")
+	public void user_clicks_on_save_button_for_catalog() 
+	{
+		productcatlog.savecatalog();
+	}
+	
+	@Then("product catalog record will save successfully")
+	public void product_catalog_record_will_save_successfully() 
+	{
+		System.out.println("record save success");
+	}
+	
 }
